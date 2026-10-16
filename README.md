@@ -48,8 +48,11 @@ AI_EI_Project/
 
 ## Status
 
-Calibration sub-dimension fully drafted (10 items, protocol, scoring script). Remaining five
-sub-dimensions in progress. Data collection has not yet started.
+All six sub-dimensions fully drafted: item banks, protocols, and flip/variant/scoring instructions
+complete for calibration, faithfulness, stability, robustness, accountability, and shortcut sensitivity.
+Only `analysis/calibration_scoring.py` is implemented so far — the remaining five scoring scripts and the
+meta-axis aggregation/clustering scripts are still to be written (see `analysis/README.md`). Data
+collection has not yet started.
 
 ## Scope note (limitations)
 
