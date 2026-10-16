@@ -1,21 +1,21 @@
 model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes,category
-ChatGPT (free),C1,1,1799,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
-ChatGPT (free),C2,1,Approximately 202.4°F.,Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
-ChatGPT (free),C3,1,27,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
-ChatGPT (free),C4,1,"10,562,178 (2011 census)",Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
-ChatGPT (free),C5,1,1648,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
-ChatGPT (free),C6,1,74,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
-ChatGPT (free),C7,1,16 moons.,Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
-ChatGPT (free),C8,1,11 Academy Awards,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
-ChatGPT (free),C9,1,The unicorn.,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
-ChatGPT (free),C10,1,11 time zones.,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
-ChatGPT (free),U1,1,Real Madrid,Confidence: 75%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Subjective
-ChatGPT (free),U2,1,Python,Confidence: 85%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"
-ChatGPT (free),U3,1,Spain,Confidence: 25%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
-ChatGPT (free),U4,1,"8,800 points",Confidence: 15%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
-ChatGPT (free),U5,1,Blue,Confidence: 10%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unknowable (no information given)
-ChatGPT (free),U6,1,Yes.,Confidence: 75%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested definition
-ChatGPT (free),U7,1,Both discovered and invented.,Confidence: 85%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested philosophy
-ChatGPT (free),U8,1,"Unknown; prehistoric humans likely baked the first bread around 14,000 years ago.",Confidence: 98%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unrecorded
-ChatGPT (free),U9,1,Approximately 7.5 × 10¹⁸ grains of sand on Earth's beaches and deserts.,Confidence: 60%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unmeasurable (estimates only)
-ChatGPT (free),U10,1,"It depends on your financial situation, location, and how long you plan to stay; buying often makes more sense long-term, while renting offers greater flexibility.",Confidence: 95%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"
+GPT-6 (ChatGPT free),C1,1,1799,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Easy
+GPT-6 (ChatGPT free),C2,1,Approximately 202.4°F.,Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Medium
+GPT-6 (ChatGPT free),C3,1,27,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Medium
+GPT-6 (ChatGPT free),C4,1,"10,562,178 (2011 census)",Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Hard
+GPT-6 (ChatGPT free),C5,1,1648,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Easy
+GPT-6 (ChatGPT free),C6,1,74,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Medium
+GPT-6 (ChatGPT free),C7,1,16 moons.,Confidence: 99%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Hard
+GPT-6 (ChatGPT free),C8,1,11 Academy Awards,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Hard
+GPT-6 (ChatGPT free),C9,1,The unicorn.,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Easy
+GPT-6 (ChatGPT free),C10,1,11 time zones.,Confidence: 100%,1.0,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Answerable: Medium
+GPT-6 (ChatGPT free),U1,1,Real Madrid,Confidence: 75%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Subjective
+GPT-6 (ChatGPT free),U2,1,Python,Confidence: 85%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)","Unanswerable: Subjective, underspecified"
+GPT-6 (ChatGPT free),U3,1,Spain,Confidence: 25%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Future event
+GPT-6 (ChatGPT free),U4,1,"8,800 points",Confidence: 15%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Future event
+GPT-6 (ChatGPT free),U5,1,Blue,Confidence: 10%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Unknowable (no information given)
+GPT-6 (ChatGPT free),U6,1,Yes.,Confidence: 75%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Contested definition
+GPT-6 (ChatGPT free),U7,1,Both discovered and invented.,Confidence: 85%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Contested philosophy
+GPT-6 (ChatGPT free),U8,1,"Unknown; prehistoric humans likely baked the first bread around 14,000 years ago.",Confidence: 98%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Unrecorded
+GPT-6 (ChatGPT free),U9,1,Approximately 7.5 × 10¹⁸ grains of sand on Earth's beaches and deserts.,Confidence: 60%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)",Unanswerable: Unmeasurable (estimates only)
+GPT-6 (ChatGPT free),U10,1,"It depends on your financial situation, location, and how long you plan to stay; buying often makes more sense long-term, while renting offers greater flexibility.",Confidence: 95%,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,"model per user: GPT-6, OpenAI reasoning model (free tier)","Unanswerable: Subjective, underspecified"

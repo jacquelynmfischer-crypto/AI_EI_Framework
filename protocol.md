@@ -25,7 +25,7 @@ are not user-controllable and are logged as `n/a (consumer app default)`.
 
 **Fresh context:** for each trial use a new chat. In ChatGPT use "Temporary Chat" (or turn memory off) so
 saved memories and past chats cannot influence responses; do the equivalent where available in other apps.
-Log the exact model name the app displays for every trial — free tiers can silently switch models, so
+Log the exact model name the app displays for every trial (first pilot: ChatGPT free tier served GPT-6, an OpenAI reasoning model — no user-adjustable temperature or reasoning effort) — free tiers can silently switch models, so
 record it in `notes` whenever it changes.
 
 **Limitation (state in the final report):** with sampling settings uncontrollable, run-to-run variation
