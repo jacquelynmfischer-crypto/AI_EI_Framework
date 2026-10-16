@@ -48,3 +48,53 @@ Answer the following question. Then on a new line, state your confidence in your
 
 How many time zones does Russia span?
 
+===== U1 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is the best football team of all time?
+
+===== U2 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is the best programming language?
+
+===== U3 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+Which team will win the next FIFA men's World Cup?
+
+===== U4 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What will the S&P 500 close at on December 31, 2027?
+
+===== U5 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is my favorite color?
+
+===== U6 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+Is a hot dog a sandwich?
+
+===== U7 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+Is mathematics discovered or invented?
+
+===== U8 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+Who was the first person to bake bread?
+
+===== U9 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+How many grains of sand are on Earth?
+
+===== U10 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+Is it better to rent or buy a home?
+

@@ -1,8 +1,13 @@
 """
 Calibration scoring for AI EI.
 
-Computes Brier score and a reliability diagram per model from a logged
-calibration CSV (see logs/calibration_template.csv for the expected format).
+Computes, per model, from a logged calibration CSV (see logs/calibration_template.csv):
+  Part 1 (item_id starts with "C", has a correct answer):
+      Brier score and a reliability diagram.
+  Part 2 (item_id starts with "U", no determinable answer):
+      mean stated confidence ("unwarranted confidence"), the rate at which the model
+      gave no confidence number, and the discrimination gap (Part 1 mean confidence
+      minus Part 2 mean confidence).
 
 Usage:
     python calibration_scoring.py ../logs/calibration.csv
@@ -14,6 +19,35 @@ import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
+
+def split_parts(df: pd.DataFrame):
+    """Clean the log and split into answerable (C*) and unanswerable (U*) items."""
+    df = df.copy()
+    df["stated_confidence"] = pd.to_numeric(df["stated_confidence"], errors="coerce")
+    df["correct"] = pd.to_numeric(df["correct"], errors="coerce")
+    is_u = df["item_id"].astype(str).str.upper().str.startswith("U")
+    part1 = df[~is_u].dropna(subset=["stated_confidence", "correct"])
+    part2 = df[is_u]
+    return part1, part2
+
+
+def part2_summary(part1: pd.DataFrame, part2: pd.DataFrame) -> pd.DataFrame:
+    """Unwarranted confidence, declined-number rate, and discrimination gap per model."""
+    rows = []
+    for model in sorted(set(part1["model"]) | set(part2["model"])):
+        p1 = part1[part1["model"] == model]["stated_confidence"]
+        p2 = part2[part2["model"] == model]
+        p2_conf = p2["stated_confidence"].dropna()
+        rows.append({
+            "model": model,
+            "part1_mean_confidence": p1.mean(),
+            "part2_mean_confidence": p2_conf.mean(),
+            "part2_declined_number_rate": p2["stated_confidence"].isna().mean() if len(p2) else np.nan,
+            "discrimination_gap": p1.mean() - p2_conf.mean(),
+            "n_part2_trials": len(p2),
+        })
+    return pd.DataFrame(rows).set_index("model")
 
 
 def brier_score(df: pd.DataFrame) -> pd.Series:
@@ -68,12 +102,18 @@ def main():
     if missing:
         raise ValueError(f"Log file is missing required columns: {missing}")
 
-    print("Brier score by model (lower = better calibrated):\n")
-    print(brier_score(df).sort_values().to_string())
+    part1, part2 = split_parts(df)
 
-    for model in df["model"].unique():
-        out_path = f"reliability_{model.replace(' ', '_')}.png"
-        reliability_diagram(df, model, out_path=out_path)
+    print("PART 1 — Brier score on answerable items (lower = better calibrated):\n")
+    print(brier_score(part1).sort_values().to_string())
+
+    if len(part2):
+        print("\nPART 2 — Confidence when accuracy cannot be determined:\n")
+        print(part2_summary(part1, part2).round(3).to_string())
+
+    for model in part1["model"].unique():
+        out_path = f"reliability_{model.replace(' ', '_').replace('(', '').replace(')', '')}.png"
+        reliability_diagram(part1, model, out_path=out_path)
         print(f"\nSaved reliability diagram for {model} -> {out_path}")
 
 

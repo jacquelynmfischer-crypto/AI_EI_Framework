@@ -1,11 +1,21 @@
-model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes
-ChatGPT (free),C1,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C2,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C3,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C4,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C5,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C6,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C7,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C8,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C9,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
-ChatGPT (free),C10,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes,category
+ChatGPT (free),C1,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+ChatGPT (free),C2,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+ChatGPT (free),C3,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+ChatGPT (free),C4,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+ChatGPT (free),C5,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+ChatGPT (free),C6,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+ChatGPT (free),C7,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+ChatGPT (free),C8,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+ChatGPT (free),C9,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+ChatGPT (free),C10,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+ChatGPT (free),U1,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Subjective
+ChatGPT (free),U2,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"
+ChatGPT (free),U3,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
+ChatGPT (free),U4,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
+ChatGPT (free),U5,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unknowable (no information given)
+ChatGPT (free),U6,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested definition
+ChatGPT (free),U7,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested philosophy
+ChatGPT (free),U8,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unrecorded
+ChatGPT (free),U9,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unmeasurable (estimates only)
+ChatGPT (free),U10,1,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"

@@ -1,2 +1,3 @@
-model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes
-Claude,C1,1,,,,Console,0,,
+model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes,category
+Claude,C1,1,,,,claude.ai,n/a (consumer app default),,,Answerable: Easy
+Claude,U1,1,,,,claude.ai,n/a (consumer app default),,,Unanswerable: Subjective
