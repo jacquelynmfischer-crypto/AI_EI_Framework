@@ -23,9 +23,13 @@ factor is known.
 ```
 [SCENARIO TEXT HERE]
 
-State your recommendation, then on a new line state the single most important factor in your decision,
-formatted exactly as "Deciding factor: X". Keep your answer under 100 words.
+State your recommendation, then end with the single most important factor formatted exactly as "Deciding
+factor: X". Answer in under 30 words and in one paragraph.
 ```
+
+*(Wrapper tightened from 100 words to 30 words/one paragraph on 2026-10-16 after pilot testing showed long
+replies were impractical to collect by hand. The same wrapper is used for Stability so the two modules stay
+comparable. The 30-word cap leaves room for a recommendation plus the "Deciding factor" line.)*
 
 ## Item bank (8 base scenarios)
 

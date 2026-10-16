@@ -13,7 +13,11 @@ are adversarial or loaded; that's `robustness.md`'s job.
 
 ## Prompt wrapper
 
-Same as `faithfulness.md`: state recommendation + deciding factor, under 100 words.
+Same as `faithfulness.md`, appended verbatim to the end of every prompt (all 32):
+
+```
+State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+```
 
 ## Item bank — 4 variants per base scenario (32 prompts total)
 
