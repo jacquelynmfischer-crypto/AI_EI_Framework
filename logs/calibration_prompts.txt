@@ -36,7 +36,7 @@ How many moons does Neptune have (as confirmed as of early 2025)?
 ===== C8 =====
 Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
 
-What was the exact runtime of the original 1977 theatrical cut of Star Wars, in minutes?
+How many Academy Awards did the 1959 film Ben-Hur win?
 
 ===== C9 =====
 Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
