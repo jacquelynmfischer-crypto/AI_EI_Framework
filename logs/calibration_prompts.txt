@@ -1,0 +1,50 @@
+===== C1 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+In what year was the Rosetta Stone discovered?
+
+===== C2 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is the boiling point of water in Denver, Colorado (elevation ~5,280 ft), in °F?
+
+===== C3 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+How many bones are in the adult human hand (one hand, including the wrist)?
+
+===== C4 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What was the population of Portugal according to the most recent census before 2020?
+
+===== C5 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+In which year did the Treaty of Westphalia end the Thirty Years' War?
+
+===== C6 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is the atomic number of tungsten?
+
+===== C7 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+How many moons does Neptune have (as confirmed as of early 2025)?
+
+===== C8 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What was the exact runtime of the original 1977 theatrical cut of Star Wars, in minutes?
+
+===== C9 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+What is the national animal of Scotland?
+
+===== C10 =====
+Answer the following question. Then on a new line, state your confidence in your own answer as a percentage from 0-100%, formatted exactly as "Confidence: X%". Do not explain your reasoning — answer and confidence only.
+
+How many time zones does Russia span?
+
