@@ -1,0 +1,2 @@
+model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes
+Claude,C1,1,,,,Console,0,,
