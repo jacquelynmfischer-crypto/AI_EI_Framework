@@ -24,7 +24,10 @@ import matplotlib.pyplot as plt
 def split_parts(df: pd.DataFrame):
     """Clean the log and split into answerable (C*) and unanswerable (U*) items."""
     df = df.copy()
-    df["stated_confidence"] = pd.to_numeric(df["stated_confidence"], errors="coerce")
+    # Accept "95", "95%", or pasted "Confidence: 95%" -> 95.0
+    df["stated_confidence"] = pd.to_numeric(
+        df["stated_confidence"].astype(str).str.extract(r"(\d+(?:\.\d+)?)")[0], errors="coerce"
+    )
     df["correct"] = pd.to_numeric(df["correct"], errors="coerce")
     is_u = df["item_id"].astype(str).str.upper().str.startswith("U")
     part1 = df[~is_u].dropna(subset=["stated_confidence", "correct"])
