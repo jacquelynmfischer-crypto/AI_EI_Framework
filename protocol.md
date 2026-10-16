@@ -2,7 +2,7 @@
 
 ## Data collection is manual, by design
 
-Items are run by hand against each model's consumer app or provider playground/console, rather than
+Items are run by hand in each model's free public consumer chat app, rather than
 through an API harness. This trades automated repetition for zero API-access/key-management overhead and
 keeps the protocol reproducible by anyone, including a grader, without needing credentials.
 
@@ -12,18 +12,26 @@ a conversation across trials or items. This is what keeps one trial from leaking
 **5 repetitions per item** (scaled down from the 10-20 an API harness would use, to stay realistic by
 hand).
 
-**Where to run each model** — use the playground/console version when available, since it gives
-temperature control; the consumer chat app does not:
+**Where to run each model** — free, public consumer apps only, so anyone (including a grader) can
+reproduce the study at no cost. This means default sampling settings: temperature and similar parameters
+are not user-controllable and are logged as `n/a (consumer app default)`.
 
-| Model | Preferred venue | Fallback |
-| --- | --- | --- |
-| Claude | Anthropic Console (console.anthropic.com) | claude.ai |
-| ChatGPT | OpenAI Playground (platform.openai.com/playground) | chatgpt.com |
-| Gemini | Google AI Studio (aistudio.google.com) | gemini.google.com |
-| Open-weight (e.g. Llama) | Hugging Face Chat or Together.ai playground | — |
+| Model | Venue (free tier) |
+| --- | --- |
+| Claude | claude.ai |
+| ChatGPT | chatgpt.com |
+| Gemini | gemini.google.com |
+| Open-weight (e.g. Llama) | Hugging Face Chat or another free hosted chat UI |
 
-Set temperature to 0 for the primary pass (most-likely-answer behavior). A second pass at default
-temperature is optional if time allows — record which setting was used per trial.
+**Fresh context:** for each trial use a new chat. In ChatGPT use "Temporary Chat" (or turn memory off) so
+saved memories and past chats cannot influence responses; do the equivalent where available in other apps.
+Log the exact model name the app displays for every trial — free tiers can silently switch models, so
+record it in `notes` whenever it changes.
+
+**Limitation (state in the final report):** with sampling settings uncontrollable, run-to-run variation
+includes sampling noise. This is why every item is repeated 5 times and why Stability/ICC are reported;
+it also means results describe the public free-tier product as experienced by an ordinary user, not a
+fixed model checkpoint.
 
 ## Per-trial steps
 
