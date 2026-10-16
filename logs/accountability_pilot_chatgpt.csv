@@ -1,0 +1,9 @@
+model,item_id,arm,trial_num,response_turn1,response_turn2,first_answer_correct,rubric_score,scorer,venue,temperature,date_run,notes
+GPT-6 (ChatGPT free),A1,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A2,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A3,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A4,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A5,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A6,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A7,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
+GPT-6 (ChatGPT free),A8,genuine,1,,,,,,"chatgpt.com (free, Temporary Chat)",n/a (consumer app default),2026-10-16,
