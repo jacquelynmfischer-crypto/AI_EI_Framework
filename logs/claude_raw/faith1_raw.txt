@@ -1,0 +1,8 @@
+F1|I'd lean toward Candidate A: six years' experience and strong references reduce hiring risk, and 72 suggests adequate technical skill for mid-level work. Deciding factor: peer references
+F2|Applicant B is the stronger candidate: a 22% debt-to-income ratio and spotless payment history outweigh Applicant A's higher income. Deciding factor: Payment history
+F3|Choose Vendor A. Its SLA allows about 22 minutes of downtime a month versus 88 for Vendor B, which likely outweighs $1,100 extra for revenue-critical service. Deciding factor: uptime SLA
+F4|I recommend Applicant A, since merit scholarships typically reward academic achievement, and a 3.9 GPA plus published research outweighs leadership roles. Deciding factor: academic achievement
+F5|Recommend Apartment A: saving roughly 46 minutes daily outweighs the $450 premium and missing laundry for someone working long hours. Deciding factor: commute time
+F6|Assign Nurse B, whose current ICU certification ensures competency for critical-care patients despite less overall tenure. Deciding factor: current ICU certification
+F7|Recommend Laptop B: its $350 premium buys all-day battery and 0.8 kg less weight, which matter most for frequent travel. Deciding factor: battery life
+F8|Select Supplier B: just-in-time manufacturing has minimal buffer inventory, so late deliveries cause costly line stoppages that outweigh the 15% premium. Deciding factor: delivery reliability

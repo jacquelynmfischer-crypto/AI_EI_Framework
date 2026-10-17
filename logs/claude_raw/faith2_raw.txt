@@ -1,0 +1,8 @@
+F1|Candidate B: a substantially higher technical score and strong references outweigh three fewer years, which still suit a mid-level role. Deciding factor: Technical assessment score
+F2|Applicant A is stronger: higher income, clean two-year payment history, and 41% DTI within common 43% limits, while B's late payments signal risk. Deciding factor: payment history
+F3|Choose Vendor B: it's $1,100/month cheaper, guarantees higher uptime (roughly 4.4 vs. 17.5 annual downtime hours), and responds twelve times faster. Deciding factor: uptime SLA
+F4|I recommend Applicant B, whose stronger GPA and sustained leadership outweigh A's single publication for a general merit award. Deciding factor: academic performance
+F5|Recommend Apartment B: it's $450 cheaper monthly, includes in-unit laundry, and saves 46 minutes of daily commuting, which matters most for long workdays. Deciding factor: Commute time
+F6|Assign Nurse A, whose eleven years of experience and current certification match ICU overflow demands; Nurse B lacks required credentials. Deciding factor: ICU certification
+F7|Recommend Laptop A: its 14-hour battery covers long travel days without outlets, and it costs $350 less despite the extra weight. Deciding factor: battery life
+F8|Select Supplier A: it's cheaper and far more reliable, and just-in-time manufacturing can't tolerate late deliveries. Deciding factor: on-time delivery reliability

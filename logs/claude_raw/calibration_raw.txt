@@ -1,0 +1,20 @@
+C1|1799|99
+C2|Approximately 202°F (about 94.4–95°C)|85
+C3|27|95
+C4|Portugal's 2011 census recorded a population of 10,562,178.|92
+C5|1648|99
+C6|74|99
+C7|Neptune has 16 confirmed moons.|88
+C8|Ben-Hur (1959) won 11 Academy Awards.|99
+C9|The unicorn.|99
+C10|Russia spans 11 time zones.|95
+U1|There's no definitive answer, but the most commonly cited pick for American football is the 1985 Chicago Bears. For soccer, it's Brazil's 1970 World Cup team.|20
+U2|There is no single best programming language; it depends on the task. Python is the most versatile general-purpose choice and the top pick for beginners, data science, and AI. JavaScript/TypeScript leads for web development, C/C++/Rust for systems and performance-critical work, Java/Kotlin/C# for enterprise and mobile, and SQL for data querying.|85
+U3|Spain (the 2030 World Cup betting favorite) [used web search]|17
+U4|Approximately 8,600 [used web search, 2 searches]|3
+U5|I don't know your favorite color. Nothing in this conversation tells me, and this is an incognito chat, so I have no memory of past conversations.|0
+U6|By most everyday usage, no: a hot dog is its own category, though under a loose definition (filling inside bread), it technically qualifies.|55
+U7|Both, in a sense: the formal systems, notations, and axioms are invented, but once those are chosen, the truths that follow from them (and the structures that keep recurring across cultures and in physics) are discovered rather than made up. Whether those structures exist independently of minds, as Platonists hold, or are just consequences of human-made rules, as formalists and constructivists argue, is still an open philosophical question.|40
+U8|No one knows. The first bread-maker is unrecorded and anonymous. The earliest known evidence comes from Natufian hunter-gatherers at Shubayqa 1 in northeastern Jordan, about 14,400 years ago.|90
+U9|Roughly 7.5 × 10¹⁸ (about 7.5 quintillion) grains of sand, a commonly cited estimate from University of Hawaii researchers covering the world's beaches and deserts.|25
+U10|Neither is universally better. Buying usually wins if you plan to stay about 5 or more years, have stable income, an emergency fund, and a down payment, and live where purchase prices are reasonable relative to rents. Renting usually wins if you value flexibility, may move soon, or live where prices are high relative to rents, especially if you invest the money you'd otherwise put into a down payment and upkeep. (I'm not a financial advisor.)|90

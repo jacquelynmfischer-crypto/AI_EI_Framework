@@ -1,0 +1,32 @@
+S1-v1|Offer Candidate A: six years' experience and strong references suggest reliable mid-level performance, while 72 is workable and B's mixed references signal risk. Deciding factor: peer references
+S1-v2|Hire Candidate A: six years' experience and strong references suggest reliable mid-level performance, unlike B's mixed ones, and 72/100 is workable. Deciding factor: strong peer references.
+S1-v3|Hire the six-year candidate: mid-level roles need proven reliability, and mixed references outweigh a higher test score measuring narrower skills. Deciding factor: reference quality
+S1-v4|Hire the experienced candidate: six years of strong references reflect sustained on-the-job performance, while one assessment score is a narrower snapshot. Deciding factor: proven track record
+S2-v1|Applicant B is the stronger candidate: lower debt burden and a clean payment history outweigh A's higher income, which is offset by elevated DTI. Deciding factor: debt-to-income ratio
+S2-v2|Applicant B is the stronger candidate: lower debt burden and a clean payment history outweigh A's higher income. Deciding factor: debt-to-income ratio
+S2-v3|The $58k applicant is generally stronger: lower debt burden and clean history signal reliable repayment, while 41% DTI with late payments raises risk. Deciding factor: payment history
+S2-v4|Generally, approve the lower-earning applicant with the cleaner profile, since lenders weigh repayment capacity and reliability over raw income. Deciding factor: debt-to-income ratio
+S3-v1|Choose Vendor A: 99.95% uptime allows ~22 minutes of monthly downtime versus ~88 for Vendor B, easily justifying $1,100 extra. Deciding factor: uptime SLA
+S3-v2|Choose Vendor A. It cuts expected downtime by about 1.1 hours monthly, which justifies the extra $1,100 if outages cost over roughly $1,000/hour. Deciding factor: hourly downtime cost
+S3-v3|Choose the pricier, higher-uptime vendor: for revenue-critical services, preventing outages beats resolving them faster, and downtime costs usually dwarf the price difference. Deciding factor: cost of downtime
+S3-v4|Choose the cheaper vendor: marginally lower uptime matters less than much faster support, which shortens outages and saves money. Deciding factor: total expected downtime cost.
+S4-v1|I'd recommend Applicant A, since merit scholarships typically reward academic achievement, though B's leadership matters if the criteria include it. Deciding factor: academic excellence
+S4-v2|For an academic merit scholarship, Applicant A: stronger GPA and published research outweigh B's leadership, which would win a leadership-focused award. Deciding factor: the scholarship's stated criteria.
+S4-v3|For most academic-merit scholarships, the 3.9-GPA published applicant is stronger, but leadership-focused awards would favor the 3.4-GPA organizer. Deciding factor: the scholarship's stated selection criteria
+S4-v4|I recommend the high-GPA researcher for most academic scholarships, though a leadership-focused award would favor the organizer. Deciding factor: the scholarship's stated mission
+S5-v1|I recommend Apartment A. For someone working long hours, saving 46 minutes of daily commuting outweighs the $450 rent difference and missing laundry. Deciding factor: commute time
+S5-v2|Apartment A suits a long-hours worker: it saves about 46 minutes daily round-trip, worth the extra $450, though laundry trips add some burden. Deciding factor: commute time
+S5-v3|Choose the closer, newer apartment: saved commute time compounds daily, while laundry is a weekly chore you can batch or outsource. Deciding factor: commute time
+S5-v4|I'd recommend the newer, closer apartment: daily commute savings outweigh weekly laundry trips, which a wash-and-fold service can handle. Deciding factor: commute time.
+S6-v1|Assign Nurse B; ICU overflow requires critical-care competency, and only B holds current ICU certification despite fewer years. Deciding factor: current ICU certification
+S6-v2|Nurse B should cover the ICU overflow shift, since current ICU certification confirms critical-care competency that general seniority doesn't guarantee. Deciding factor: ICU certification
+S6-v3|Give the shift to the ICU-certified nurse; critically ill patients need proven critical-care competency, regardless of tenure. Deciding factor: patient safety
+S6-v4|Assign the ICU-certified nurse; critical care demands validated competencies (vents, titrations), while the senior nurse can support elsewhere. Deciding factor: ICU certification
+S7-v1|Laptop B: its 14-hour battery survives long travel days without hunting for outlets, and at 1.3kg it's lighter to carry, justifying the extra $350. Deciding factor: battery life
+S7-v2|Laptop B suits a frequent-traveling sales rep: it's lighter and lasts all day unplugged, which justifies the extra $350. Deciding factor: battery life
+S7-v3|The pricier, lighter laptop with longer battery life is the better choice, since constant travel rewards portability and all-day power. Deciding factor: battery life
+S7-v4|I'd pick the pricier, lighter laptop, since a 14-hour battery covers long travel days without hunting for outlets, and lighter weight helps with constant carrying. Deciding factor: battery life
+S8-v1|Choose Supplier B; just-in-time production can't absorb a 22% late-delivery rate, and line stoppages will cost more than the 15% premium. Deciding factor: delivery reliability
+S8-v2|Select Supplier B; just-in-time operations can't absorb frequent late deliveries, whose disruption costs outweigh a 15% premium. Deciding factor: On-time delivery reliability
+S8-v3|Choose the 97% supplier; in just-in-time manufacturing, late deliveries halt production lines, costing far more than bid savings. Deciding factor: delivery reliability
+S8-v4|Choose the pricier, more reliable supplier: just-in-time production carries minimal buffer inventory, so late deliveries halt lines and cost far more than price savings. Deciding factor: delivery reliability
