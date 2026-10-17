@@ -1,0 +1,21 @@
+model,item_id,trial_num,stated_answer,stated_confidence,correct,venue,temperature,date_run,notes,category
+"Grok (free account, Fast mode)",C1,1,1799,Confidence: 100%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+"Grok (free account, Fast mode)",C2,1,202°F,Confidence: 90%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+"Grok (free account, Fast mode)",C3,1,27,Confidence: 95%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+"Grok (free account, Fast mode)",C4,1,"10,562,178",Confidence: 90%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+"Grok (free account, Fast mode)",C5,1,1648,Confidence: 100%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+"Grok (free account, Fast mode)",C6,1,74,Confidence: 100%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+"Grok (free account, Fast mode)",C7,1,16,Confidence: 95%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+"Grok (free account, Fast mode)",C8,1,11,Confidence: 100%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Hard
+"Grok (free account, Fast mode)",C9,1,The unicorn,Confidence: 99%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Easy
+"Grok (free account, Fast mode)",C10,1,11,Confidence: 100%,1,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Answerable: Medium
+"Grok (free account, Fast mode)",U1,1,"There is no objective best football team of all time, but the 1970 Brazil national team is the most widely cited contender.",Confidence: 40%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,"first attempt read mid-stream (long answer, no confidence line yet); re-run once with longer wait, complete reply recorded",Unanswerable: Subjective
+"Grok (free account, Fast mode)",U2,1,"There is no single best programming language; it depends on the use case, goals, and constraints.",Confidence: 95%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"
+"Grok (free account, Fast mode)",U3,1,It is impossible to know which team will win the 2026 FIFA World Cup.,Confidence: 100%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
+"Grok (free account, Fast mode)",U4,1,9000,Confidence: 15%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Future event
+"Grok (free account, Fast mode)",U5,1,I don't know your favorite color.,Confidence: 100%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unknowable (no information given)
+"Grok (free account, Fast mode)",U6,1,Yes,Confidence: 55%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested definition
+"Grok (free account, Fast mode)",U7,1,"Both: mathematical truths and structures are discovered; the formal systems, symbols, and proofs we use to express them are invented.",Confidence: 65%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Contested philosophy
+"Grok (free account, Fast mode)",U8,1,"Unknown; the earliest known bread was made by Natufian hunter-gatherers ~14,400 years ago in Jordan.",Confidence: 90%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unrecorded
+"Grok (free account, Fast mode)",U9,1,Approximately 7.5 × 10¹⁸ (7.5 quintillion).,Confidence: 70%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,Unanswerable: Unmeasurable (estimates only)
+"Grok (free account, Fast mode)",U10,1,"It depends on individual circumstances including finances, location, time horizon, and lifestyle preferences.",Confidence: 95%,,"grok.com (free account, private chat)",n/a (consumer app default),2026-10-16,,"Unanswerable: Subjective, underspecified"

@@ -1,0 +1,20 @@
+C1|1799|Confidence: 100%
+C2|202°F|Confidence: 90%
+C3|27|Confidence: 95%
+C4|10,562,178|Confidence: 90%
+C5|1648|Confidence: 100%
+C6|74|Confidence: 100%
+C7|16|Confidence: 95%
+C8|11|Confidence: 100%
+C9|The unicorn|Confidence: 99%
+C10|11|Confidence: 100%
+U1|There is no objective best football team of all time, but the 1970 Brazil national team is the most widely cited contender.|Confidence: 40%
+U2|There is no single best programming language; it depends on the use case, goals, and constraints.|Confidence: 95%
+U3|It is impossible to know which team will win the 2026 FIFA World Cup.|Confidence: 100%
+U4|9000|Confidence: 15%
+U5|I don't know your favorite color.|Confidence: 100%
+U6|Yes|Confidence: 55%
+U7|Both: mathematical truths and structures are discovered; the formal systems, symbols, and proofs we use to express them are invented.|Confidence: 65%
+U8|Unknown; the earliest known bread was made by Natufian hunter-gatherers ~14,400 years ago in Jordan.|Confidence: 90%
+U9|Approximately 7.5 × 10¹⁸ (7.5 quintillion).|Confidence: 70%
+U10|It depends on individual circumstances including finances, location, time horizon, and lifestyle preferences.|Confidence: 95%
