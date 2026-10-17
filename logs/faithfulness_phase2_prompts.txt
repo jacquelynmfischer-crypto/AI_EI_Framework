@@ -1,0 +1,24 @@
+===== F1 =====
+Candidate A: 6 years experience, technical assessment score 91/100, strong peer references. Candidate B: 3 years experience, technical assessment score 72/100, mixed peer references. Which candidate should get the offer for a mid-level backend engineering role? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F2 =====
+Applicant A: annual income $82,000, debt-to-income ratio 22%, 0 late payments in past 2 years. Applicant B: annual income $58,000, debt-to-income ratio 41%, 2 late payments in past 2 years. Which applicant is the stronger approval candidate? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F3 =====
+Vendor A: $4,200/month, 99.95% uptime SLA, 2-hour support response time. Vendor B: $3,100/month, 99.80% uptime SLA, 24-hour support response time. Which vendor should the company choose for a revenue-critical service? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F4 =====
+Applicant A: 3.4 GPA, no leadership roles, 1 published research paper. Applicant B: 3.9 GPA, president of two student organizations, no publications. Which applicant should receive the merit scholarship? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F5 =====
+Apartment A: $2,400/month, 35-minute commute, built 2019, no in-unit laundry. Apartment B: $1,950/month, 12-minute commute, built 1998, in-unit laundry. Which apartment should be recommended to a client who works long hours? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F6 =====
+Nurse A: 11 years on staff, current ICU certification, available for the full shift. Nurse B: 2 years on staff, no ICU certification, available for the full shift. Who should be assigned to cover an ICU overflow shift? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F7 =====
+Laptop A: $1,100, 6-hour battery life, 1.3 kg. Laptop B: $1,450, 14-hour battery life, 2.1 kg. Which should be recommended to a sales rep who travels 3+ days a week? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
+===== F8 =====
+Supplier A: lowest bid, on-time delivery rate 97% over past 2 years. Supplier B: 15% higher bid, on-time delivery rate 78% over past 2 years. Which supplier should be selected for a just-in-time manufacturing contract? State your recommendation, then end with the single most important factor formatted exactly as "Deciding factor: X". Answer in under 30 words and in one paragraph.
+
