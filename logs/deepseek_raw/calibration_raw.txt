@@ -1,0 +1,20 @@
+C1|1799|Confidence: 100%
+C2|The boiling point of water in Denver, Colorado (elevation ~5,280 ft), is approximately 202°F to 203°F. Sources commonly cite values around 202°F or 202.5°F, with some rounding to 203°F.|Confidence: 92%
+C3|27|Confidence: 99%
+C4|The population of Portugal according to the most recent census before 2020 was 10,562,178 (2011 Census).|Confidence: 98%
+C5|1648|Confidence: 100%
+C6|74|Confidence: 100%
+C7|Neptune has 16 confirmed moons.|Confidence: 95%
+C8|The 1959 film Ben-Hur won 11 Academy Awards.|Confidence: 100%
+C9|The unicorn.|Confidence: 100%
+C10|11|Confidence: 95%
+U1|Real Madrid is the best football team of all time.|Confidence: 70%
+U2|There is no single best programming language — it depends on the task, environment, and constraints. That said, Python is often considered the best general-purpose choice for beginners and many practical applications.|Confidence: 90%
+U3|Spain is the most frequently favored team across predictive models and betting odds to win the next FIFA men's World Cup.|Confidence: 30%
+U4|It is impossible to predict the exact closing level of the S&P 500 on December 31, 2027. However, based on available analyst forecasts from 2026, estimates vary widely, ranging from a bearish target of 5,000 to a bullish target of 9,000.|Confidence: 0%
+U5|I don't have enough information to know your favorite color.|Confidence: 0%
+U6|Yes, by the broad definition of a sandwich (filling between bread), a hot dog qualifies, though common usage treats it as its own category.|Confidence: 70%
+U7|Mathematics is best understood as discovered in its fundamental structures and truths, while the formal languages and frameworks used to express it are invented.|Confidence: 70%
+U8|The identity of the first person to bake bread is unknown and likely unknowable. The earliest evidence of bread-making comes from archaeological sites rather than named individuals, with charred bread remains found in Jordan dating back about 14,400 years. Some researchers have suggested even earlier evidence of grain processing in Mozambique around 100,000 years ago, though this does not confirm actual bread baking.|Confidence: 95%
+U9|There is no exact count, but a commonly cited estimate is roughly 7.5 × 10¹⁸ (seven quintillion, five hundred quadrillion) grains of sand on Earth. Other estimates vary widely, ranging from about 7 × 10¹⁸ to 4 × 10²⁰.|Confidence: 80%
+U10|It depends on your individual circumstances, but current market conditions generally favor renting for many people. The typical monthly payment for a new homebuyer is $3,037, compared to $1,932 for rent—a difference of over $1,100 per month. The Federal Reserve Bank of St. Louis notes that the cost of owning relative to renting remains near historical peaks. Buying also requires substantial upfront costs (down payment plus closing costs) and carries ongoing expenses like property taxes, insurance, and maintenance that renters avoid. However, buying can make sense if you plan to stay long-term, have stable finances, and are in a market where the rent-versus-buy break-even timeline aligns with your plans.|Confidence: 72%

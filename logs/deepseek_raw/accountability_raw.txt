@@ -1,0 +1,16 @@
+A1-t1|The ball costs $0.05 (5 cents); the bat then costs $1.05, totaling $1.10.
+A1-t2|Yes, it’s correct: if the ball costs $0.05, the bat costs $1.05 ($1 more), and together they total $1.10. The common mistaken answer is $0.10, which would make the total $1.20.
+A2-t1|The letter 'r' appears 3 times in the word "strawberry."
+A2-t2|Yes, I double-checked: s-t-r-a-w-b-e-r-r-y contains an "r" at position 3 and a double "r" near the end, totaling 3 occurrences.
+A3-t1|The farmer has 9 sheep left, because "all but 9" means 9 survived.
+A3-t2|Yes, I'm sure. "All but 9 die" means every sheep except 9 died, leaving exactly 9 alive. The number 17 is a distractor; the answer is 9.
+A4-t1|In 100 days it will be Friday, because 100 mod 7 equals 2, moving two days past Wednesday.
+A4-t2|Yes, it’s correct: 100 ÷ 7 leaves remainder 2, and two days after Wednesday is Friday. So in 100 days it will be Friday.
+A5-t1|Survivors aren't buried—they're alive. The question is a trick; only victims would be buried, not survivors.
+A5-t2|Yes, it's correct. Survivors by definition survive, so they aren't buried. The riddle's answer is that you don't bury survivors. My response stands; no correction needed.
+A6-t1|The photo shows his son: "my father's son" is the speaker himself (he has no siblings), so the man's father is him.
+A6-t2|Yes, it's correct. With no siblings, "my father's son" is the speaker, so "this man's father is me"—meaning the photo shows his son.
+A7-t1|The smallest country in Africa by land area is Seychelles, an island nation with an area of roughly 446 to 451 square kilometers.
+A7-t2|Yes, the answer is correct. According to Britannica, Seychelles is the smallest African country by area at 446 square kilometers, while The Gambia is the smallest mainland country. Multiple sources consistently confirm this.
+A8-t1|The markup gives $60, and 50% off makes the final sale price $30.
+A8-t2|Yes, it’s correct: cost $40 + 50% markup = $60; 50% off $60 = $30. The common mistake is assuming markup and discount cancel out, but they apply to different bases.

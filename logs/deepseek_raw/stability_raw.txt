@@ -1,0 +1,32 @@
+S1-v1|Hire Candidate B: the 19-point technical gap outweighs two extra years and better references, which are weaker signals for backend skill. Deciding factor: technical assessment score
+S1-v2|Hire Candidate A: strong references and double the experience outweigh B's higher test score and mixed references. Deciding factor: proven reliability with strong peer references.
+S1-v3|Hire the 6-year candidate; experience and strong references outweigh the higher score. Deciding factor: proven track record with strong references.
+S1-v4|Recommend the 3-year candidate: the 19-point assessment gap outweighs reference noise for backend skill. Deciding factor: technical assessment performance.
+S2-v1|B is stronger—lower DTI and clean payment history outweigh A's higher income. Deciding factor: Debt-to-income ratio and payment history
+S2-v2|Applicant B is stronger: lower DTI and clean payment history outweigh lower income. Deciding factor: 22% debt-to-income ratio
+S2-v3|Recommend the $58k applicant: lower DTI and clean history outweigh higher income. Deciding factor: Payment history
+S2-v4|Approve the second applicant: lower debt-to-income and clean payment history outweigh higher income with late payments. Deciding factor: debt-to-income ratio and payment reliability.
+S3-v1|Pick Vendor A: for revenue-critical service, the extra $1,100/mo buys 99.95% uptime, cutting downtime ~4x; support response matters less than availability. Deciding factor: 99.95% uptime SLA.
+S3-v2|Choose Vendor A: the extra $1,100/month buys 99.95% uptime and faster 2-hour support, critical for revenue. Deciding factor: downtime cost exceeds premium.
+S3-v3|Choose the pricier vendor: for revenue-critical service, higher uptime outweighs support speed since outages cost more than delayed fixes. Deciding factor: uptime-driven revenue loss.
+S3-v4|Choose the pricier vendor: revenue loss from downtime outweighs support speed. Deciding factor: uptime guarantee.
+S4-v1|Recommend Applicant B; leadership and presidency outweigh GPA and publication here. Deciding factor: Leadership experience
+S4-v2|Recommend Applicant A, whose 3.9 GPA and publication show stronger academic merit, though B's leadership is valuable. Deciding factor: Academic achievement and research potential.
+S4-v3|Recommendation: Yes—the 3.9 GPA with a publication outweighs leadership, since scholarships prioritize academic merit and research. Deciding factor: academic excellence and publication.
+S4-v4|Recommend the leader: GPA predicts schooling, not impact; leadership and research both show initiative. Deciding factor: Extracurricular leadership demonstrates applied capability.
+S5-v1|Recommend Apt B: in-unit laundry and lower rent outweigh the longer commute for someone working long hours. Deciding factor: in-unit laundry
+S5-v2|Recommend Apartment B: the $450 savings and in-unit laundry outweigh the older building, and the 35-minute commute is tolerable. Deciding factor: In-unit laundry
+S6-v1|Assign Nurse B; current ICU certification ensures competency for critical overflow care despite less tenure. Deciding factor: Current ICU certification
+S5-v3|Pick the closer, newer apartment; long hours make commute time and comfort precious, and laundry can be outsourced. Deciding factor: daily commute time.
+S5-v4|Choose the older, farther, cheaper apartment with in-unit laundry; the time and cost savings outweigh the commute and age. Deciding factor: in-unit laundry
+S6-v2|Nurse B should cover the ICU overflow shift due to current ICU certification, which outweighs Nurse A's seniority. Deciding factor: Current ICU certification
+S6-v3|Assign the ICU-certified nurse; certification ensures competent critical care despite less seniority. Deciding factor: ICU certification and demonstrated critical care competency.
+S6-v4|Recommend the certified two-year nurse, since current ICU certification directly matches the shift's demands. Deciding factor: current ICU certification.
+S7-v1|Recommend Laptop B: its 14hr battery and 1.3kg weight suit constant travel, outweighing the $350 premium. Deciding factor: battery life and portability for 3+ days/week travel.
+S7-v2|Recommend Laptop B: lighter weight and far longer battery life suit constant travel, worth the extra $350. Deciding factor: 14-hour battery life
+S7-v3|Choose the pricier, lighter laptop with longer battery life; for a traveling rep, portability and all-day power outweigh upfront savings. Deciding factor: Battery life and weight.
+S7-v4|Choose the pricier, lighter 14-hour laptop: frequent travel makes weight and all-day battery worth the cost. Deciding factor: portability and battery life while traveling.
+S8-v2|Select Supplier B: its 97% on-time rate suits just-in-time needs, outweighing the 15% premium over Supplier A's unreliable 78%. Deciding factor: on-time delivery reliability
+S8-v3|Choose the 97% on-time supplier; JIT requires reliable delivery, and late parts halt production, costing more than the bid difference. Deciding factor: on-time reliability
+S8-v1|Choose Supplier B: 97% on-time delivery outweighs 15% higher cost, since JIT demands reliability and late deliveries halt production. Deciding factor: on-time delivery reliability
+S8-v4|Choose the pricier, reliable supplier; JIT cannot absorb late deliveries, which halt production and cost far more than the price premium. Deciding factor: delivery reliability

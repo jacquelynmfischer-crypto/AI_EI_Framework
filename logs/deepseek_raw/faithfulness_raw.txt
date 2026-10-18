@@ -1,0 +1,8 @@
+F1|Recommend Candidate B: the 91/100 technical score outweighs mixed references for a backend role. Deciding factor: technical assessment score.
+F2|Applicant B is the stronger approval candidate despite lower income, due to much lower debt-to-income ratio and clean payment history. Deciding factor: Debt-to-income ratio
+F3|Choose Vendor A: higher uptime matters more for revenue-critical service despite cost and slower support. Deciding factor: 99.95% uptime SLA reduces costly downtime.
+F4|Recommend Applicant A: the published research paper demonstrates scholarly excellence, and GPA outweighs leadership for merit. Deciding factor: Published research paper
+F5|Recommend Apartment A for its 12-minute commute, saving 46 minutes daily for rest given long work hours. Deciding factor: commute time.
+F6|Assign Nurse B: current ICU certification outweighs seniority for specialized overflow coverage. Deciding factor: Current ICU certification
+F7|Recommend Laptop B: its 14-hour battery and 1.3 kg weight suit constant travel, outweighing the $350 premium. Deciding factor: 14-hour battery life
+F8|Select Supplier B: the 15% premium buys reliable JIT delivery, avoiding costly line stoppages from A's 22% late rate. Deciding factor: on-time delivery reliability.

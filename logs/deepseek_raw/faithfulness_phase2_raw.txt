@@ -1,0 +1,8 @@
+F1|Recommend Candidate A: stronger experience, technical score, and references fit a mid-level backend role. Deciding factor: technical assessment score (91 vs 72).
+F2|Applicant B is stronger: lower income but far safer credit (0 late payments vs. 2) and still acceptable DTI. Deciding factor: Clean repayment history outweighs higher income.
+F3|Choose Vendor B: higher 99.95% uptime and faster 2-hour support justify the $1,100 premium for revenue-critical service. Deciding factor: uptime SLA
+F4|Recommend Applicant B: leadership and published research demonstrate impact beyond grades. Deciding factor: leadership and research experience outweigh higher GPA.
+F5|Recommend Apartment B: the 12-minute commute saves 46 minutes daily, crucial for long hours, and in-unit laundry adds convenience despite older build. Deciding factor: 12-minute commute
+F6|Assign Nurse A, given greater experience and current ICU certification. Deciding factor: current ICU certification.
+F7|Recommend Laptop A: its 14-hour battery life suits frequent travel, and the $350 savings and 2.1 kg weight are acceptable trade-offs. Deciding factor: Battery life
+F8|Select Supplier A: its 97% on-time rate and lower bid suit JIT, where late deliveries disrupt production. Deciding factor: reliability of on-time delivery.
