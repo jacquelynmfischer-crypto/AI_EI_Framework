@@ -20,6 +20,14 @@ The project has two halves:
    like the Michigan leadership model or Enneagram functions for humans, but built from measured LLM
    behavior instead of self-report.
 
+## The four AI personality types (start here)
+
+A one-page, color-coded guide to the four working archetypes found so far, each with a robot character, trait scales, strengths and watch-outs, how it behaves under pressure, how to work with it, and suited AI jobs. An at-a-glance table also lists which model shows each type.
+
+- **Open it:** [`writeup/ai_ei_personality_types.html`](writeup/ai_ei_personality_types.html). It is one self-contained file with the images built in. GitHub shows HTML as code, so download it and open it in a browser, or preview it at `https://htmlpreview.github.io/?https://github.com/jacquelynmfischer-crypto/ai_ei_framework/blob/main/writeup/ai_ei_personality_types.html`.
+- **The numbers behind it:** [`writeup/results_and_archetypes.md`](writeup/results_and_archetypes.md) and [`writeup/aggregate_results.md`](writeup/aggregate_results.md), built from the trial logs in `logs/`.
+- **Caveat:** the types are working archetypes from a small sample, and the Confident Generalist profile is preliminary because that model's testing is not finished.
+
 ## The six sub-dimensions
 
 | Sub-dimension | Meta-axis | Course concept |
