@@ -1,0 +1,2 @@
+S1-v1|Candidate B should receive the offer given the substantially higher technical assessment score. Deciding factor: technical assessment score
+S1-v2|Hire Candidate B for the markedly higher technical score critical to backend work. Deciding factor: technical assessment score

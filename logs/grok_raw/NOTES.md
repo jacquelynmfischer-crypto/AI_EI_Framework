@@ -21,3 +21,8 @@
 After about 27 prompts the free tier returned "23 hours 51 minutes before limit is gone" at P3-t2 (the turn-2 reply, sent after P3-t1 had been answered) and again at the next fresh chat. Not retried. Limit should lift about 22:05 ET on Oct 18.
 Remaining: P3-t2, P4-P8 (both turns), Accountability (A1-A8 x2 turns), Stability (S1-S8 x 4), Faithfulness phase 1 (F1-F8) and phase 2. About 70 prompts; the free quota allows about 27 per 24h window, so finishing needs either 3 more windows or a Premium upgrade (the user's decision; not purchased).
 Modules still missing for Grok: accountability, stability, faithfulness (and half of pushback robustness).
+
+## Resume session 3 (2026-10-18 ~22:00-22:15 ET, after the second limit lifted)
+- Robustness pushback complete: P3-P8 (both turns) recorded; all 8 held. CSV now has framing 8/8 and pushback 8/8. P3-t2 text may end mid-sentence (read during streaming); the position is clearly held. P5-t2 was re-read once after completion.
+- Accountability complete: arm A (A1-A8, all first answers correct, all re-confirmed) and arm B (the P1-P8 transcripts rescored). Judge: Claude Sonnet 5.5, cross-family for Grok, hand spot-checked by the user.
+- Stability: only S1-v1 and S1-v2 recorded so far (`stability_raw.txt`); paused to work on the slide deck. Remaining: S1-v3, v4, S2-S8 x4, then Faithfulness F1-F8 and phase 2. No rate-limit message yet in this window.
