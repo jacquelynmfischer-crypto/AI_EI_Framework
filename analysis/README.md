@@ -1,9 +1,10 @@
 # Analysis
 
-`calibration_scoring.py` — Brier score + reliability diagram per model, implemented and runnable now
-against `logs/calibration.csv`.
+Implemented: `calibration_scoring.py`, `faithfulness_scoring.py`, `stability_scoring.py`,
+`robustness_scoring.py`, `accountability_scoring.py`, `shortcut_scoring.py` and `aggregate.py`
+(sub-scores, meta-axes, weighting schemes, correlations, PCA; writes to `../writeup/`).
 
-Remaining scripts (to be added once their item banks and logs exist):
+Not yet written: `clustering.py`. Original plan for each script:
 
 - `faithfulness_scoring.py` — perturbation-flip rate per model
 - `stability_scoring.py` — agreement rate / ICC across paraphrase variants

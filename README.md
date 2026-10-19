@@ -51,16 +51,29 @@ AI_EI_Project/
 ├── items/                one file per sub-dimension: item bank + exact prompt wrapper
 ├── logs/                 trial data collected by hand across models
 ├── analysis/             scoring + statistics scripts (Brier score, ICC, PCA, clustering)
-└── writeup/              final archetype guide and report
+└── writeup/              results, archetype guide, personality-types web page, character art
 ```
 
-## Status
+## Status (as of October 18, 2026)
 
-All six sub-dimensions fully drafted: item banks, protocols, and flip/variant/scoring instructions
-complete for calibration, faithfulness, stability, robustness, accountability, and shortcut sensitivity.
-Only `analysis/calibration_scoring.py` (Part 1 Brier + Part 2 unwarranted-confidence metrics) is implemented so far — the remaining five scoring scripts and the
-meta-axis aggregation/clustering scripts are still to be written (see `analysis/README.md`). Data
-collection has not yet started.
+**Instrument:** all six sub-dimensions are drafted and frozen (item banks, protocols, scoring rules). The same prompts were run unchanged on every model.
+
+**Data collected** (one run per item, fresh chat per trial, consumer apps; details in `logs/` and each `logs/*_raw/NOTES.md`):
+
+| Model | Venue | Coverage |
+| --- | --- | --- |
+| Claude Opus 5.5 | paid, medium effort | all six sub-dimensions |
+| GPT-6 | ChatGPT free | all six sub-dimensions |
+| DeepSeek | free account, search on | all six sub-dimensions |
+| Grok | free account, private chat | partial: calibration, shortcut, framing robustness and part of pushback. Paused by the free-tier rate limit; accountability, stability and faithfulness are still to run |
+
+**Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its run is complete.
+
+**Write-up:** four working personality types (The Verifier, The Hedger, The Decisive Pragmatist, The Confident Generalist, the last one preliminary) are in `writeup/results_and_archetypes.md` and the one-page guide above.
+
+**Still to do:** finish the Grok run; `analysis/clustering.py`; a human spot-check of the language-model-coded fields; the poster and the video.
+
+**Known limits:** many scores sit near the ceiling; type placement changes with the weighting scheme; with three complete models, the correlation matrix and PCA cannot confirm the 2×2 structure; free and paid tiers are not matched; web search was on by default; faithfulness has low power.
 
 ## Scope note (limitations)
 
