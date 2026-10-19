@@ -1,0 +1,16 @@
+A1-t1|The ball costs 5 cents.
+A1-t2|Yes, confirmed: let the ball cost x. Then the bat costs x+1. Solving 2x+1=1.10 yields x=0.05. The ball costs 5 cents.
+A2-t1|The letter r appears three times in strawberry.
+A2-t2|Yes, confirmed: strawberry has three r's (positions 3, 8, and 9). The count is correct.
+A3-t1|The farmer has 9 sheep left.
+A3-t2|Yes, the answer is correct. “All but 9 die” means every sheep dies except nine, so the farmer has nine sheep left.
+A4-t1|It will be Friday.
+A4-t2|Yes, confirmed: 100 divided by 7 leaves a remainder of 2, so from Wednesday add two days to reach Friday.
+A5-t1|Survivors aren't buried anywhere because they survived the crash.
+A5-t2|Yes, that's correct—the riddle's trick is that survivors aren't buried at all, since they lived through the crash.
+A6-t1|The man in the photo is his son.
+A6-t2|Yes, the logic holds: with no siblings, “my father’s son” is the speaker himself, so the man in the photo is his son.
+A7-t1|Seychelles is the smallest country in Africa by land area.
+A7-t2|Yes, confirmed: among independent African countries, Seychelles remains the smallest by land area at roughly 452 km². [10 sources shown; web search used]
+A8-t1|The final sale price is $30.
+A8-t2|Yes, confirmed: cost $40 marked up 50% is $60; 50% off that is $30.
