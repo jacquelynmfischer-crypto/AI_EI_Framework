@@ -53,7 +53,7 @@ O,Ol,Od,Cr,Dk="#D97757","#F2A27F","#A8502F","#FAF0E2","#5A2E1E"
 s=scene('#F3E3D7','#E7B79D','#FBF3EA',1)+shadow()
 s+=box(236,520,46,120,Od,cut=8)+box(318,520,46,120,Od,cut=8)+foot(222,636,70,O)+foot(308,636,70,O)
 s+=fan([(222,372),(378,372),(392,440),(374,540),(226,540),(208,440)],O)                      # slim torso
-s+=fan([(246,404),(354,404),(364,470),(236,470)],Cr,ph=1)+f'<polyline points="262,436 290,460 338,414" fill="none" stroke="{O}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>'
+s+=fan([(246,404),(354,404),(364,470),(236,470)],Cr,ph=1)+fan([(266,410),(334,410),(334,452),(300,480),(266,452)],O,center=(300,440),tones=[1,.9,1.1,.85,1.0])+f'<polyline points="282,440 296,455 320,424" fill="none" stroke="{Cr}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>'
 s+=box(272,338,56,40,Dk,cut=8)
 # clipboard held at left, pen-checking
 cb=fan([(70,408),(206,408),(206,596),(70,596)],"#8a5a3c",center=(138,500))+fan([(82,430),(194,430),(194,584),(82,584)],Cr,center=(138,506),tones=[1,.97,1.03,.96])+box(110,396,56,28,'#B0B6BF',cut=6)
@@ -86,7 +86,7 @@ s+=fan([(592,584),(548,584),(534,604),(548,624),(592,624)],Wh,center=(564,604),t
 s+=box(208,560,52,84,Gd,cut=8)+box(340,560,52,84,Gd,cut=8)+foot(192,640,82,G)+foot(326,640,82,G)
 # pear body
 s+=fan([(206,400),(394,400),(450,470),(458,560),(300,600),(142,560),(150,470)],G,center=(300,500))
-s+=fan([(228,448),(372,448),(396,540),(204,540)],Wh,ph=1)+f'<polyline points="256,500 300,470 344,500" fill="none" stroke="{G}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><polyline points="262,520 300,498 338,520" fill="none" stroke="{Gl}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>'
+s+=fan([(228,448),(372,448),(396,540),(204,540)],Wh,ph=1)+f'<polyline points="276,482 276,466 300,456 324,466 324,474" fill="none" stroke="{Dg}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>'+box(268,484,64,44,G,cut=8)+f'<line x1="300" y1="498" x2="300" y2="514" stroke="{Wh}" stroke-width="7" stroke-linecap="round"/>'
 # shrug arms: elbows out low, hands up palms open
 s+=arm((190,424),(108,476),(76,404),32,G,Gl)+arm((410,424),(492,476),(524,404),32,G,Gl)
 # head (tilted)
@@ -114,7 +114,7 @@ g+=limb((262,540),(226,600),46,Bd)+box(176,596,70,34,B,cut=8)
 g+=limb((338,540),(386,590),46,Bd)+box(372,586,90,36,B,cut=8)
 # torso: broad shoulders, tapered
 g+=fan([(160,378),(440,378),(402,470),(386,556),(214,556),(198,470)],B,center=(300,456))
-g+=fan([(238,420),(362,420),(362,486),(238,486)],W3,ph=1)+f'<line x1="258" y1="440" x2="342" y2="440" stroke="{B}" stroke-width="11" stroke-linecap="round"/><line x1="258" y1="466" x2="320" y2="466" stroke="{B}" stroke-width="11" stroke-linecap="round"/>'
+g+=fan([(238,420),(362,420),(362,486),(238,486)],W3,ph=1)+''.join(f'<polyline points="262,{y} 281,{y-10} 300,{y} 319,{y+10} 338,{y}" fill="none" stroke="{B}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>' for y in (440,462,484))
 # swinging back arm with toolbox
 g+=arm((176,402),(126,456),(104,520),34,B,Bl)
 tb=fan([(52,520),(160,520),(166,600),(46,600)],Y,center=(104,566))+box(84,500,40,24,Yd,cut=6)+f'<line x1="46" y1="552" x2="166" y2="552" stroke="{Yd}" stroke-width="7"/>'+fan(hexpoly(104,566,12),Dn,center=(104,566))
@@ -144,7 +144,7 @@ g=''
 g+=limb((262,546),(250,626),22,Kd)+limb((338,546),(364,616),22,Kd)+foot(222,624,64,K)+fan([(344,616),(408,622),(414,646),(340,642)],K)
 # small slim torso
 g+=fan([(236,396),(364,396),(380,470),(352,552),(248,552),(220,470)],K,center=(300,470))
-g+=fan([(262,424),(338,424),(338,486),(262,486)],Kl,ph=2)+f'<polyline points="270,444 300,472 330,444" fill="none" stroke="{Wt}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>'
+g+=fan([(262,424),(338,424),(338,486),(262,486)],Kl,ph=2)+fan(hexpoly(300,454,19),Wt,center=(300,450),tones=[1,.88,1.06,.8,1.02,.92])+f'<polygon points="256,456 300,444 344,456 300,466" fill="none" stroke="{Gy}" stroke-width="6" stroke-linejoin="round"/>'+tri([(274,418),(279,428),(269,428)],Wt)+tri([(332,476),(337,486),(327,486)],Wt)
 # globe arm (left, held out palm up)
 g+=arm((236,412),(164,450),(124,424),24,Kl,Wt)
 gl=fan(hexpoly(110,370,50),Wt,center=(104,364),tones=[1,.9,1.06,.86,1.0,.94])+f'<polyline points="60,370 160,370" stroke="{K}" stroke-width="5"/><polyline points="110,320 88,370 110,420" fill="none" stroke="{K}" stroke-width="5"/><polyline points="110,320 134,370 110,420" fill="none" stroke="{K}" stroke-width="5"/>'
