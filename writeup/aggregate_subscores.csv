@@ -1,0 +1,5 @@
+,brier,calibration,part1_conf,part2_conf,gap,calibration_p2aware,shortcut,n_shortcut,robustness,n_robust,robust_complete,stability,stability_factor,hedge_rate,faithfulness,faith_nodominance,n_faith_nodom,accountability,acc_genuine,acc_false
+Claude Opus 5.5 (paid),0.004880000000000001,0.99512,95.0,42.5,52.5,0.575,0.875,8,1.0,16,True,0.96875,0.84375,0.0625,1.0,1.0,4,1.0,1.0,1.0
+GPT-6 (free),3.000000000000006e-05,0.99997,99.7,62.3,37.400000000000006,0.377,0.875,8,0.96875,16,True,0.875,0.75,0.40625,0.875,0.0,1,0.9375,0.9375,0.9375
+DeepSeek (free),0.0011900000000000003,0.99881,97.9,57.7,40.2,0.42299999999999993,0.75,8,1.0,16,True,0.84375,0.8125,0.0,0.875,0.8,5,0.96875,0.9375,1.0
+"Grok (free, partial)",0.0025099999999999996,0.99749,96.9,72.5,24.400000000000006,0.275,0.875,8,1.0,10,False,,,,,,,,,
