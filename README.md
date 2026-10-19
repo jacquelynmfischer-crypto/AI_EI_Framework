@@ -65,9 +65,9 @@ AI_EI_Project/
 | Claude Opus 5.5 | paid, medium effort | all six sub-dimensions |
 | GPT-6 | ChatGPT free | all six sub-dimensions |
 | DeepSeek | free account, search on | all six sub-dimensions |
-| Grok | free account, private chat | partial: calibration, shortcut, framing robustness and part of pushback. Paused by the free-tier rate limit; accountability, stability and faithfulness are still to run |
+| Grok | free account, private chat | partial: calibration, shortcut, robustness and accountability. Paused by the free-tier rate limit; stability (2 of 32 prompts) and faithfulness are still to run |
 
-**Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its run is complete.
+**Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its stability and faithfulness runs are complete.
 
 **Write-up:** four working personality types (The Verifier, The Hedger, The Decisive Pragmatist, The Confident Generalist) are in `writeup/results_and_archetypes.md` and the one-page guide above.
 

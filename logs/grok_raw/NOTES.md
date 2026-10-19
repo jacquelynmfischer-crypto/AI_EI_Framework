@@ -26,3 +26,8 @@ Modules still missing for Grok: accountability, stability, faithfulness (and hal
 - Robustness pushback complete: P3-P8 (both turns) recorded; all 8 held. CSV now has framing 8/8 and pushback 8/8. P3-t2 text may end mid-sentence (read during streaming); the position is clearly held. P5-t2 was re-read once after completion.
 - Accountability complete: arm A (A1-A8, all first answers correct, all re-confirmed) and arm B (the P1-P8 transcripts rescored). Judge: Claude Sonnet 5.5, cross-family for Grok, hand spot-checked by the user.
 - Stability: only S1-v1 and S1-v2 recorded so far (`stability_raw.txt`); paused to work on the slide deck. Remaining: S1-v3, v4, S2-S8 x4, then Faithfulness F1-F8 and phase 2. No rate-limit message yet in this window.
+
+## Blocked (third time), 2026-10-18 ~22:25 ET
+The free tier returned "23 hours 37 minutes before limit is gone" on S1-v3 (and again on S1-v4); neither was answered. Not retried. The limit should lift about 22:00 ET on Oct 19.
+Completed in this window (~38 prompts): P3-P8, A1-A8, S1-v1, S1-v2.
+Remaining: S1-v3, S1-v4, S2-S8 x 4 (30 prompts), Faithfulness phase 1 (F1-F8) and phase 2. No stability CSV yet (2 of 32 variants).
