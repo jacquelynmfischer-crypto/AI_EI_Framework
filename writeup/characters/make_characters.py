@@ -1,4 +1,5 @@
-"""Four original low-poly (faceted) robot characters for the AI EI personality types."""
+"""Four original low-poly (faceted) robot characters for the AI EI personality types, v2:
+distinct silhouettes, poses and large props."""
 import math, random
 W, H = 600, 720
 
@@ -8,118 +9,163 @@ def shade(c, f):
     if f>=1: r,g,b=[min(255,int(v+(255-v)*(f-1))) for v in (r,g,b)]
     else: r,g,b=[int(v*f) for v in (r,g,b)]
     return f'#{r:02x}{g:02x}{b:02x}'
-
-TONES=[1.0,0.9,1.12,0.8,1.06,0.86,1.16,0.93]
-def fan(pts, base, center=None, tones=TONES, stroke=True, ph=0):
-    if center is None:
-        center=(sum(p[0] for p in pts)/len(pts)+3, sum(p[1] for p in pts)/len(pts)-4)
-    out=[]
+T=[1.0,0.9,1.12,0.8,1.06,0.86,1.16,0.93]
+def P(pts): return " ".join(f"{x:.1f},{y:.1f}" for x,y in pts)
+def tri(pts,col): return f'<polygon points="{P(pts)}" fill="{col}" stroke="{col}" stroke-width="0.8" stroke-linejoin="round"/>'
+def fan(pts, base, center=None, tones=T, ph=0):
     n=len(pts)
-    for i in range(n):
-        a,b=pts[i],pts[(i+1)%n]
-        col=shade(base,tones[(i+ph)%len(tones)])
-        out.append(f'<polygon points="{center[0]:.1f},{center[1]:.1f} {a[0]:.1f},{a[1]:.1f} {b[0]:.1f},{b[1]:.1f}" fill="{col}" stroke="{col}" stroke-width="0.8" stroke-linejoin="round"/>')
-    return ''.join(out)
+    if center is None: center=(sum(p[0] for p in pts)/n+3, sum(p[1] for p in pts)/n-4)
+    return ''.join(tri([center,pts[i],pts[(i+1)%n]],shade(base,tones[(i+ph)%len(tones)])) for i in range(n))
+def box(x,y,w,h,base,cut=12,ph=0):
+    return fan([(x+cut,y),(x+w-cut,y),(x+w,y+cut),(x+w,y+h-cut),(x+w-cut,y+h),(x+cut,y+h),(x,y+h-cut),(x,y+cut)],base,ph=ph)
+def hexpoly(cx,cy,r,rot=0): return [(cx+r*math.cos(math.radians(a+rot)),cy+r*math.sin(math.radians(a+rot))) for a in range(0,360,60)]
+def hexeye(cx,cy,r,col): return fan(hexpoly(cx,cy,r),col,center=(cx,cy))
+def limb(a,b,w,base):
+    (x1,y1),(x2,y2)=a,b; dx,dy=x2-x1,y2-y1; L=math.hypot(dx,dy) or 1; nx,ny=-dy/L*w/2,dx/L*w/2
+    p1,p2,p3,p4=(x1+nx,y1+ny),(x2+nx,y2+ny),(x2-nx,y2-ny),(x1-nx,y1-ny)
+    return tri([p1,p2,a if False else ((x2),(y2))],shade(base,1.12))+tri([p1,(x2,y2),(x1,y1)],shade(base,1.12))+tri([(x1,y1),(x2,y2),p3],shade(base,0.82))+tri([(x1,y1),p3,p4],shade(base,0.82))
+def joint(c,r,col): return fan(hexpoly(c[0],c[1],r),col,center=c)
+def hand(c,r,col): return fan(hexpoly(c[0],c[1],r,30),col,center=c)
+def arm(sh,el,ha,w,base,hcol):
+    return limb(sh,el,w,base)+limb(el,ha,w*0.9,base)+joint(el,w*0.6,hcol)+hand(ha,w*0.85,hcol)
+def svg(inner,extra=''): return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"><defs><clipPath id="c"><rect width="{W}" height="{H}" rx="30"/></clipPath></defs><g clip-path="url(#c)">{inner}</g></svg>'
 
-def box(x,y,w,h,base,cut=14,ph=0):
-    pts=[(x+cut,y),(x+w-cut,y),(x+w,y+cut),(x+w,y+h-cut),(x+w-cut,y+h),(x+cut,y+h),(x,y+h-cut),(x,y+cut)]
-    return fan(pts,base,ph=ph)
-
-def tri(pts,col): return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x,y in pts)}" fill="{col}" stroke="{col}" stroke-width="0.8" stroke-linejoin="round"/>'
-
-def scene(bgtop, mount, snow, seed):
+def scene(bgtop, mount, snow, seed, trees=True):
     random.seed(seed)
     s=f'<rect width="{W}" height="{H}" fill="{bgtop}"/>'
-    # mountains
-    peaks=[(-40,430,120,200,300,430),(180,430,330,150,520,430),(380,430,520,220,700,430)]
-    for i,(x1,y1,x2,y2,x3,y3) in enumerate(peaks):
-        s+=tri([(x1,y1),(x2,y2),(x3,y3)],shade(mount,1.0-0.06*i))
-        s+=tri([(x2,y2),(x3,y3),(x2+20,y3)],shade(mount,0.84))
-        s+=tri([(x2,y2),(x2-34,y2+60),(x2+30,y2+52)],'#f7fbff')
-    # snow ground
+    for i,(x1,x2,x3,y2) in enumerate([(-40,120,300,200),(180,330,520,150),(380,520,700,220)]):
+        s+=tri([(x1,430),(x2,y2),(x3,430)],shade(mount,1.0-0.06*i))+tri([(x2,y2),(x3,430),(x2+20,430)],shade(mount,0.84))+tri([(x2,y2),(x2-34,y2+60),(x2+30,y2+52)],'#f7fbff')
     s+=f'<polygon points="0,430 600,430 600,{H} 0,{H}" fill="{snow}"/>'
     for i in range(14):
         x=random.randint(0,560); y=random.randint(450,700); w=random.randint(40,110)
         s+=tri([(x,y),(x+w,y+random.randint(-6,6)),(x+w/2,y+random.randint(14,26))],shade(snow,random.choice([0.95,0.9,1.0])))
-    # pines
-    for x,y,sc in [(40,470,1.0),(110,450,0.7),(520,470,1.05),(570,440,0.75),(470,445,0.65)]:
-        s+=tri([(x-34*sc,y),(x+34*sc,y),(x,y-110*sc)],'#4f9a78')
-        s+=tri([(x,y-110*sc),(x+34*sc,y),(x+4*sc,y)],'#3b7d60')
-        s+=tri([(x-26*sc,y-50*sc),(x+26*sc,y-50*sc),(x,y-140*sc)],'#5cae88')
-        s+=tri([(x,y-140*sc),(x+26*sc,y-50*sc),(x+3*sc,y-50*sc)],'#448a6b')
-        s+=f'<rect x="{x-5*sc}" y="{y}" width="{10*sc}" height="{20*sc}" fill="#6b4a3a"/>'
-    # rocks
-    for x,y in [(60,640),(500,655)]:
-        s+=fan([(x,y),(x+20,y-26),(x+58,y-34),(x+84,y-4),(x+60,y+14),(x+10,y+14)],'#b9c2cc')
+    if trees:
+        for x,y,sc in [(40,470,1.0),(104,448,0.66),(548,462,1.0),(488,444,0.62)]:
+            s+=tri([(x-34*sc,y),(x+34*sc,y),(x,y-110*sc)],'#4f9a78')+tri([(x,y-110*sc),(x+34*sc,y),(x+4*sc,y)],'#3b7d60')+tri([(x-26*sc,y-50*sc),(x+26*sc,y-50*sc),(x,y-140*sc)],'#5cae88')+tri([(x,y-140*sc),(x+26*sc,y-50*sc),(x+3*sc,y-50*sc)],'#448a6b')+f'<rect x="{x-5*sc}" y="{y}" width="{10*sc}" height="{20*sc}" fill="#6b4a3a"/>'
     return s
-
-def robot(body, light, dark, plate, accent, eyes, ant, prop, torso_icon, mouth=''):
-    s=f'<ellipse cx="300" cy="668" rx="130" ry="16" fill="#8aa0b5" opacity=".35"/>'
-    # legs
-    s+=box(226,548,50,92,dark,cut=10)+box(324,548,50,92,dark,cut=10)
-    s+=fan([(208,632),(284,632),(292,660),(204,660)],body)+fan([(316,632),(392,632),(396,660),(308,660)],body,ph=2)
-    # arms
-    s+=fan([(150,392),(184,386),(168,500),(128,494)],dark,ph=1)+fan([(416,386),(450,392),(472,494),(432,500)],dark,ph=3)
-    s+=fan([(124,494),(172,500),(166,536),(128,534)],body,ph=2)+fan([(428,500),(476,494),(472,534),(434,536)],body,ph=4)
-    # torso
-    s+=fan([(186,372),(414,372),(436,440),(410,560),(190,560),(164,440)],body)
-    s+=fan([(236,404),(364,404),(378,480),(222,480)],plate,ph=1)
-    s+=torso_icon
-    # neck + head
-    s+=box(270,340,60,40,dark,cut=8)
-    head=[(196,160),(404,160),(454,206),(454,296),(412,350),(188,350),(146,296),(146,206)]
-    s+=fan(head,body,center=(300,246))
-    s+=box(112,214,38,78,dark,cut=10)+box(450,214,38,78,dark,cut=10)
-    face=[(206,190),(394,190),(424,222),(424,288),(392,326),(208,326),(176,288),(176,222)]
-    s+=fan(face,plate,center=(300,258),tones=[1.0,0.93,1.05,0.9,1.02,0.95,1.06,0.92])
-    s+=eyes+mouth+ant+prop
-    return s
-
-def diamond(cx,cy,r,col): return tri([(cx,cy-r),(cx+r,cy),(cx,cy+r)],col)+tri([(cx,cy-r),(cx-r,cy),(cx,cy+r)],shade(col,0.8))
-def hexeye(cx,cy,r,col):
-    pts=[(cx+r*math.cos(math.radians(a)),cy+r*math.sin(math.radians(a))) for a in range(0,360,60)]
-    return fan(pts,col,center=(cx,cy))
-def svg(inner): return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}"><defs><clipPath id="c"><rect width="{W}" height="{H}" rx="30"/></clipPath></defs><g clip-path="url(#c)">{inner}</g></svg>'
-
+def shadow(cx=300,rx=130): return f'<ellipse cx="{cx}" cy="676" rx="{rx}" ry="15" fill="#6f879c" opacity=".35"/>'
+def foot(x,y,w,col,flip=1): return fan([(x,y),(x+w*flip,y),(x+(w+10)*flip,y+28),(x-8*flip,y+28)],col)
+def tx(x,y,t,size,col,style='normal',weight='bold',anchor='middle',fam='Georgia,serif'): return f'<text x="{x}" y="{y}" font-family="{fam}" font-size="{size}" font-style="{style}" font-weight="{weight}" text-anchor="{anchor}" fill="{col}">{t}</text>'
 chars=[]
-# 1 Verifier: Claude orange + cream
+
+# ---------- 1 VERIFIER (orange/cream): tall, upright, inspects a checklist with a big magnifier
 O,Ol,Od,Cr,Dk="#D97757","#F2A27F","#A8502F","#FAF0E2","#5A2E1E"
-eyes=hexeye(256,258,22,Dk)+hexeye(344,258,22,Dk)+tri([(246,246),(256,236),(262,248)],'#fff')+tri([(334,246),(344,236),(350,248)],'#fff')
-mouth=tri([(272,298),(328,298),(300,314)],Dk)
-ant=box(292,100,16,60,Dk,cut=4)+fan([(300,56),(330,78),(322,112),(278,112),(270,78)],Cr,center=(300,86))+f'<polyline points="284,86 297,100 318,72" fill="none" stroke="{O}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>'
-icon=f'<polyline points="262,440 290,466 340,414" fill="none" stroke="{O}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>'
-glass=fan([(430,430),(466,418),(500,444),(502,484),(468,508),(432,492)],Cr,center=(468,462))+fan([(442,440),(466,432),(490,450),(490,478),(468,494),(444,484)],'#bfe3f2',center=(466,464),tones=[1.0,.94,1.06,.9])+tri([(488,496),(506,484),(548,540)],Dk)+tri([(496,500),(506,484),(552,548),(536,552)],shade(Dk,.8))
-chars.append(('1_the_verifier',scene('#F3E3D7','#E7B79D','#FBF3EA',1)+robot(O,Ol,Od,Cr,Dk,eyes,ant,glass,icon,mouth)))
+s=scene('#F3E3D7','#E7B79D','#FBF3EA',1)+shadow()
+s+=box(236,520,46,120,Od,cut=8)+box(318,520,46,120,Od,cut=8)+foot(222,636,70,O)+foot(308,636,70,O)
+s+=fan([(222,372),(378,372),(392,440),(374,540),(226,540),(208,440)],O)                      # slim torso
+s+=fan([(246,404),(354,404),(364,470),(236,470)],Cr,ph=1)+f'<polyline points="262,436 290,460 338,414" fill="none" stroke="{O}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>'
+s+=box(272,338,56,40,Dk,cut=8)
+# clipboard held at left, pen-checking
+cb=fan([(70,408),(206,408),(206,596),(70,596)],"#8a5a3c",center=(138,500))+fan([(82,430),(194,430),(194,584),(82,584)],Cr,center=(138,506),tones=[1,.97,1.03,.96])+box(110,396,56,28,'#B0B6BF',cut=6)
+for i,yy in enumerate((460,498,536)):
+    cb+=f'<polyline points="96,{yy} 106,{yy+10} 124,{yy-10}" fill="none" stroke="{O}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><line x1="136" y1="{yy}" x2="182" y2="{yy}" stroke="{Dk}" stroke-width="6" stroke-linecap="round"/>'
+s+=arm((226,392),(184,452),(154,500),30,O,Ol)+cb
+# head
+s+=fan([(190,168),(410,168),(446,216),(446,300),(404,346),(196,346),(154,300),(154,216)],O,center=(300,252))
+s+=box(120,224,36,70,Dk,cut=8)+box(444,224,36,70,Dk,cut=8)
+s+=fan([(204,194),(396,194),(424,224),(424,290),(392,326),(208,326),(176,290),(176,224)],Cr,center=(300,260),tones=[1,.94,1.05,.9,1.02,.95,1.06,.92])
+for cx in (256,344): s+=fan(hexpoly(cx,262,36),'#cfe7f0',center=(cx,262),tones=[1.0,.92,1.05,.9,1.02,.95])+fan(hexpoly(cx,262,36),Dk,center=(cx,262),tones=[1])*0 + f'<polygon points="{P(hexpoly(cx,262,36))}" fill="none" stroke="{Dk}" stroke-width="7" stroke-linejoin="round"/>'+hexeye(cx,262,14,Dk)+tri([(cx-6,254),(cx,247),(cx+4,256)],'#fff')
+s+=f'<line x1="292" y1="262" x2="308" y2="262" stroke="{Dk}" stroke-width="6"/>'+tri([(276,306),(324,306),(300,318)],Dk)
+s+=box(293,104,14,64,Dk,cut=4)+fan(hexpoly(300,84,28),Cr,center=(300,84))+f'<polyline points="288,84 297,96 314,72" fill="none" stroke="{O}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>'
+# big magnifier held up on the right, lens over checklist-like page
+s+=arm((380,394),(446,448),(486,396),30,O,Ol)
+lens_c=(506,318)
+s+=limb((488,382),(520,340),20,Dk)
+s+=fan(hexpoly(lens_c[0],lens_c[1],74,0),Dk,center=lens_c)+fan(hexpoly(lens_c[0],lens_c[1],58,0),'#cfeaf6',center=(lens_c[0]-4,lens_c[1]-6),tones=[1.1,.95,1.06,.9,1.02,.97])+tri([(lens_c[0]-30,lens_c[1]-24),(lens_c[0]-6,lens_c[1]-38),(lens_c[0]-18,lens_c[1]-8)],'#ffffff')
+s+=f'<polyline points="{lens_c[0]-24},{lens_c[1]+6} {lens_c[0]-6},{lens_c[1]+26} {lens_c[0]+28},{lens_c[1]-18}" fill="none" stroke="{O}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>'
+chars.append(('1_the_verifier',svg(s)))
 
-# 2 Hedger: GPT green + white
+# ---------- 2 HEDGER (green/white): round, squat, shrugging, head tilted, signpost pointing both ways
 G,Gl,Gd,Wh,Dg="#10A37F","#59CDAB","#0B6B54","#F3FBF8","#0A4A3B"
-eyes=hexeye(256,258,22,Dg)+tri([(318,238),(372,222),(372,236),(318,250)],Dg)+hexeye(346,262,16,Dg)+tri([(250,240),(262,230),(266,244)],'#fff')
-mouth=f'<polyline points="270,306 286,296 302,306 318,296 334,306" fill="none" stroke="{Dg}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>'
-ant=f'<polyline points="300,160 300,128 336,104" fill="none" stroke="{Dg}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>'+fan([(340,62),(370,78),(370,112),(340,128),(310,112),(310,78)],Wh,center=(340,95))+f'<text x="340" y="108" font-family="Georgia,serif" font-size="40" font-weight="bold" text-anchor="middle" fill="{G}">?</text>'
-icon=f'<polyline points="258,462 300,430 342,462" fill="none" stroke="{G}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><polyline points="258,436 300,404 342,436" fill="none" stroke="{Gl}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".0"/>'
-bub=fan([(24,66),(54,36),(196,36),(226,66),(226,116),(196,146),(112,146),(80,182),(84,146),(54,146),(24,116)],Wh,center=(124,92),tones=[1.0,.97,1.03,.95,1.0,.97,1.02,.96,1.0,.98,1.0])+f'<text x="125" y="104" font-family="Georgia,serif" font-size="34" font-style="italic" text-anchor="middle" fill="{Dg}">maybe…</text>'
-chars.append(('2_the_hedger',scene('#DDF2EA','#9BD4C0','#F5FBF8',2)+robot(G,Gl,Gd,Wh,Dg,eyes,ant,bub,icon,mouth)))
+s=scene('#DDF2EA','#9BD4C0','#F5FBF8',2)+shadow(280,150)
+# signpost at right
+s+=box(532,500,16,150,'#8a6a4a',cut=4)
+s+=fan([(466,526),(530,526),(552,548),(530,570),(466,570)],Wh,center=(508,548),tones=[1,.95,1.05,.92,1.0])+tx(504,558,'yes?',24,Dg,'italic')
+s+=fan([(592,584),(548,584),(534,604),(548,624),(592,624)],Wh,center=(564,604),tones=[1,.95,1.05,.92,1.0])+tx(568,613,'no?',22,Dg,'italic')
+# legs short
+s+=box(208,560,52,84,Gd,cut=8)+box(340,560,52,84,Gd,cut=8)+foot(192,640,82,G)+foot(326,640,82,G)
+# pear body
+s+=fan([(206,400),(394,400),(450,470),(458,560),(300,600),(142,560),(150,470)],G,center=(300,500))
+s+=fan([(228,448),(372,448),(396,540),(204,540)],Wh,ph=1)+f'<polyline points="256,500 300,470 344,500" fill="none" stroke="{G}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><polyline points="262,520 300,498 338,520" fill="none" stroke="{Gl}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>'
+# shrug arms: elbows out low, hands up palms open
+s+=arm((190,424),(108,476),(76,404),32,G,Gl)+arm((410,424),(492,476),(524,404),32,G,Gl)
+# head (tilted)
+hd=box(176,176,248,164,G,cut=44)+box(130,216,40,70,Gd,cut=10)+box(430,216,40,70,Gd,cut=10)
+hd+=fan([(202,200),(398,200),(414,226),(414,290),(390,318),(210,318),(186,290),(186,226)],Wh,center=(300,258),tones=[1,.94,1.05,.9,1.02,.95,1.06,.92])
+hd+=hexeye(256,256,22,Dg)+tri([(250,238),(262,228),(266,242)],'#fff')+tri([(322,240),(376,222),(376,236),(322,252)],Dg)+hexeye(348,266,16,Dg)
+hd+=f'<polyline points="262,300 282,288 302,300 322,288 342,300" fill="none" stroke="{Dg}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>'
+hd+=f'<polyline points="300,176 300,140 336,116" fill="none" stroke="{Dg}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>'+fan(hexpoly(342,92,30),Wh,center=(342,92))+tx(342,106,'?',40,G)
+s+=box(272,340,56,34,Gd,cut=8)+f'<g transform="rotate(-9 300 330)">{hd}</g>'
+# thought cloud of caveats
+cl=fan([(44,70),(72,36),(150,28),(214,40),(250,78),(232,126),(168,142),(90,138),(48,112)],Wh,center=(148,86),tones=[1,.97,1.03,.95,1.0,.97,1.02,.96])
+cl+=tx(146,66,'maybe…',24,Dg,'italic')+tx(146,92,'unless…',24,Dg,'italic')+tx(146,118,'if…',24,Dg,'italic')+fan(hexpoly(236,164,10),Wh,center=(236,164))+fan(hexpoly(262,194,6),Wh,center=(262,194))
+s+=cl
+chars.append(('2_the_hedger',svg(s)))
 
-# 3 Pragmatist: DeepSeek blue + white
+# ---------- 3 PRAGMATIST (blue/white/yellow): mid-stride, hard hat, wrench on shoulder, toolbox
 B,Bl,Bd,W3,Dn="#4D6BFE","#8FA2FF","#2E43C4","#F2F5FF","#16227A"
-eyes=tri([(224,246),(290,246),(290,278),(236,278)],Dn)+tri([(310,246),(376,246),(364,278),(310,278)],Dn)+tri([(236,254),(264,254),(264,266),(240,266)],'#B7C5FF')+tri([(322,254),(350,254),(346,266),(322,266)],'#B7C5FF')+f'<polyline points="204,222 290,242" stroke="{Dn}" stroke-width="12" stroke-linecap="round"/><polyline points="396,222 310,242" stroke="{Dn}" stroke-width="12" stroke-linecap="round"/>'
-mouth=f'<line x1="266" y1="304" x2="334" y2="304" stroke="{Dn}" stroke-width="10" stroke-linecap="round"/>'
-bolt=tri([(318,40),(276,106),(304,106),(288,150),(340,84),(312,84)],'#FFD84D')+tri([(318,40),(312,84),(340,84)],'#E8B923')
-ant=f'<line x1="300" y1="160" x2="300" y2="138" stroke="{Dn}" stroke-width="14" stroke-linecap="round"/>'+bolt
-icon=f'<polyline points="262,420 338,420" stroke="{B}" stroke-width="12" stroke-linecap="round"/><polyline points="262,448 316,448" stroke="{B}" stroke-width="12" stroke-linecap="round"/>'
-arrow=fan([(420,440),(470,440),(470,418),(520,462),(470,506),(470,484),(420,484)],W3,center=(468,462))
-wrench=fan([(70,520),(94,540),(150,456),(126,438)],Dn)+fan([(120,418),(150,424),(162,452),(142,462),(130,446),(112,444),(104,430)],W3,center=(134,438))
-chars.append(('3_the_decisive_pragmatist',scene('#E1E7FF','#A9B8F5','#F6F8FF',3)+robot(B,Bl,Bd,W3,Dn,eyes,ant,arrow+wrench,icon,mouth)))
+Y,Yd="#FFD84D","#E0AC1C"
+s=scene('#E1E7FF','#A9B8F5','#F6F8FF',3)+shadow(300,150)
+# speed lines
+for yy,ln in [(420,70),(470,100),(520,60),(570,90)]: s+=f'<line x1="{20}" y1="{yy}" x2="{20+ln}" y2="{yy}" stroke="{Bl}" stroke-width="7" stroke-linecap="round" opacity=".7"/>'
+g=''
+# back leg & front leg (stride)
+g+=limb((262,540),(226,600),46,Bd)+box(176,596,70,34,B,cut=8)
+g+=limb((338,540),(386,590),46,Bd)+box(372,586,90,36,B,cut=8)
+# torso: broad shoulders, tapered
+g+=fan([(160,378),(440,378),(402,470),(386,556),(214,556),(198,470)],B,center=(300,456))
+g+=fan([(238,420),(362,420),(362,486),(238,486)],W3,ph=1)+f'<line x1="258" y1="440" x2="342" y2="440" stroke="{B}" stroke-width="11" stroke-linecap="round"/><line x1="258" y1="466" x2="320" y2="466" stroke="{B}" stroke-width="11" stroke-linecap="round"/>'
+# swinging back arm with toolbox
+g+=arm((176,402),(126,456),(104,520),34,B,Bl)
+tb=fan([(52,520),(160,520),(166,600),(46,600)],Y,center=(104,566))+box(84,500,40,24,Yd,cut=6)+f'<line x1="46" y1="552" x2="166" y2="552" stroke="{Yd}" stroke-width="7"/>'+fan(hexpoly(104,566,12),Dn,center=(104,566))
+g+=tb
+# head: squarer, narrower, hard hat
+g+=box(274,340,52,40,Dn,cut=8)
+g+=fan([(206,178),(394,178),(420,214),(420,300),(386,348),(214,348),(180,300),(180,214)],B,center=(300,262))
+g+=box(150,230,34,62,Dn,cut=8)+box(416,230,34,62,Dn,cut=8)
+g+=fan([(214,206),(386,206),(404,232),(404,296),(378,326),(222,326),(196,296),(196,232)],W3,center=(300,268),tones=[1,.94,1.05,.9,1.02,.95,1.06,.92])
+g+=tri([(222,254),(292,254),(292,286),(236,286)],Dn)+tri([(308,254),(378,254),(364,286),(308,286)],Dn)+tri([(236,262),(266,262),(266,274),(240,274)],'#B7C5FF')+tri([(322,262),(352,262),(346,274),(322,274)],'#B7C5FF')
+g+=f'<polyline points="208,230 292,252" stroke="{Dn}" stroke-width="12" stroke-linecap="round"/><polyline points="392,230 308,252" stroke="{Dn}" stroke-width="12" stroke-linecap="round"/><line x1="268" y1="308" x2="336" y2="308" stroke="{Dn}" stroke-width="10" stroke-linecap="round"/>'
+# hard hat
+g+=fan([(190,196),(206,140),(300,112),(394,140),(410,196)],Y,center=(300,160),tones=[1.05,.95,1.12,.85,1.0])+fan([(168,196),(432,196),(446,214),(154,214)],Yd,center=(300,205),tones=[1,.9,1.1,.95])
+g+=tri([(300,126),(316,172),(284,172)],Yd)+tri([(322,134),(298,168),(326,168)],B)
+# front arm: wrench raised over shoulder
+g+=arm((424,402),(480,440),(468,380),34,B,Bl)
+g+=limb((466,384),(520,250),22,Dn)+fan([(486,208),(522,196),(550,214),(552,250),(534,268),(520,244),(504,244),(494,262),(476,248),(474,222)],W3,center=(514,232),tones=[1,.9,1.1,.85,1.0,.9,1.05,.95,1.0,.9])
+s+=f'<g transform="rotate(5 300 400)">{g}</g>'
+chars.append(('3_the_decisive_pragmatist',svg(s)))
 
-# 4 Generalist: Grok black + white
+# ---------- 4 GENERALIST (black/white): big dome head, skinny, leaning back, shouting into a megaphone, orbiting icons
 K,Kl,Kd,Wt,Kk="#1C1F26","#4A505C","#0A0B0E","#FFFFFF","#000000"
-eyes=hexeye(256,258,26,Wt)+hexeye(344,258,26,Wt)+hexeye(262,256,12,Kk)+hexeye(350,256,12,Kk)
-mouth=fan([(250,294),(350,294),(332,322),(268,322)],Wt,center=(300,302),tones=[1,.9,1.05,.85])+f'<line x1="268" y1="302" x2="332" y2="302" stroke="{K}" stroke-width="4"/>'
-ant=f'<line x1="300" y1="160" x2="300" y2="122" stroke="#8F95A0" stroke-width="14" stroke-linecap="round"/>'+fan([(300,66),(322,80),(322,106),(300,120),(278,106),(278,80)],Wt,center=(300,94))+f'<line x1="300" y1="80" x2="300" y2="108" stroke="{K}" stroke-width="7" stroke-linecap="round"/><line x1="286" y1="94" x2="314" y2="94" stroke="{K}" stroke-width="7" stroke-linecap="round"/>'
-icon=f'<polyline points="258,424 300,456 342,424" fill="none" stroke="{Wt}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>'
-mega=fan([(430,432),(520,396),(520,520),(430,484)],Wt,center=(480,460))+fan([(398,436),(432,436),(432,480),(398,480)],K,center=(414,458))+f'<polyline points="536,420 560,404 M536,458 566,458 M536,496 560,512" fill="none" stroke="{K}" stroke-width="8" stroke-linecap="round"/>'
-globe=fan([(70,420),(106,404),(142,420),(150,460),(130,496),(94,500),(66,474),(62,440)],Wt,center=(106,452))+f'<polyline points="64,450 148,450" stroke="{K}" stroke-width="5"/><polyline points="106,402 90,450 106,498" fill="none" stroke="{K}" stroke-width="5"/><polyline points="106,402 122,450 106,498" fill="none" stroke="{K}" stroke-width="5"/>'
-chars.append(('4_the_confident_generalist',scene('#E6E8EB','#B9BFC9','#F7F8F9',4)+robot(K,Kl,Kd,Kd,Wt,eyes,ant,f'<g transform="translate(-26 0)">{mega}</g>'+globe,icon,mouth)))
+Gy="#8F95A0"
+s=scene('#E6E8EB','#B9BFC9','#F7F8F9',4)+shadow(290,120)
+g=''
+# skinny legs, one up on tiptoe
+g+=limb((262,546),(250,626),22,Kd)+limb((338,546),(364,616),22,Kd)+foot(222,624,64,K)+fan([(344,616),(408,622),(414,646),(340,642)],K)
+# small slim torso
+g+=fan([(236,396),(364,396),(380,470),(352,552),(248,552),(220,470)],K,center=(300,470))
+g+=fan([(262,424),(338,424),(338,486),(262,486)],Kl,ph=2)+f'<polyline points="270,444 300,472 330,444" fill="none" stroke="{Wt}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>'
+# globe arm (left, held out palm up)
+g+=arm((236,412),(164,450),(124,424),24,Kl,Wt)
+gl=fan(hexpoly(110,370,50),Wt,center=(104,364),tones=[1,.9,1.06,.86,1.0,.94])+f'<polyline points="60,370 160,370" stroke="{K}" stroke-width="5"/><polyline points="110,320 88,370 110,420" fill="none" stroke="{K}" stroke-width="5"/><polyline points="110,320 134,370 110,420" fill="none" stroke="{K}" stroke-width="5"/>'
+g+=gl
+# neck and BIG round head
+g+=box(278,356,44,40,Kd,cut=6)
+g+=fan([(190,150),(300,118),(410,150),(450,240),(420,330),(300,364),(180,330),(150,240)],K,center=(300,244),tones=[1.0,.88,1.14,.8,1.08,.86,1.18,.93])
+g+=box(120,214,36,64,Kd,cut=8)+box(444,214,36,64,Kd,cut=8)
+g+=fan([(202,188),(398,188),(424,236),(398,312),(300,334),(202,312),(176,236)],Kd,center=(300,252),tones=[1,.9,1.06,.8,1.02,.92,1.0])
+g+=hexeye(252,246,32,Wt)+hexeye(348,246,32,Wt)+hexeye(260,244,14,Kk)+hexeye(356,244,14,Kk)
+g+=fan([(240,284),(360,284),(340,324),(260,324)],Wt,center=(300,296),tones=[1,.9,1.05,.85])+f'<line x1="262" y1="302" x2="338" y2="302" stroke="{K}" stroke-width="4"/>'
+g+=f'<line x1="300" y1="122" x2="300" y2="82" stroke="{Gy}" stroke-width="14" stroke-linecap="round"/>'+fan(hexpoly(300,58,26),Wt,center=(300,58))+f'<line x1="300" y1="44" x2="300" y2="72" stroke="{K}" stroke-width="7" stroke-linecap="round"/><line x1="286" y1="58" x2="314" y2="58" stroke="{K}" stroke-width="7" stroke-linecap="round"/>'
+# right arm raising megaphone to mouth (pointing right, up)
+g+=arm((364,412),(420,448),(430,372),24,Kl,Wt)
+mg=fan([(404,268),(404,330),(470,372),(470,226)],Wt,center=(440,298),tones=[1,.9,1.06,.86])+box(366,282,44,34,Kd,cut=6)+f'<polyline points="470,252 500,230 M470,300 512,300 M470,346 500,368" fill="none" stroke="{K}" stroke-width="9" stroke-linecap="round"/>'
+g+=mg
+s+=f'<g transform="rotate(-4 300 400)">{g}</g>'
+# orbiting icons bursting out of the megaphone
+for (cx,cy,ch) in [(536,196,'?'),(566,288,'✓'),(540,392,'★'),(470,150,'!'),(120,200,'♪'),(70,270,'?')]:
+    s+=fan(hexpoly(cx,cy,26),Wt,center=(cx,cy))+f'<polygon points="{P(hexpoly(cx,cy,26))}" fill="none" stroke="{K}" stroke-width="4" stroke-linejoin="round"/>'+tx(cx,cy+11,ch,30,K,fam='Arial,sans-serif')
+chars.append(('4_the_confident_generalist',svg(s)))
 
-for name,inner in chars: open(f'{name}.svg','w').write(svg(inner))
+for name,inner in chars: open(f'{name}.svg','w').write(inner)
 print('ok')
