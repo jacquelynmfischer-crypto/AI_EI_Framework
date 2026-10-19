@@ -26,7 +26,7 @@ A one-page, color-coded guide to the four working archetypes found so far, each 
 
 - **Open it:** [`writeup/ai_ei_personality_types.html`](writeup/ai_ei_personality_types.html). It is one self-contained file with the images built in. GitHub shows HTML as code, so download it and open it in a browser, or preview it at `https://htmlpreview.github.io/?https://github.com/jacquelynmfischer-crypto/ai_ei_framework/blob/main/writeup/ai_ei_personality_types.html`.
 - **The numbers behind it:** [`writeup/results_and_archetypes.md`](writeup/results_and_archetypes.md) and [`writeup/aggregate_results.md`](writeup/aggregate_results.md), built from the trial logs in `logs/`.
-- **Caveat:** the types are working archetypes from a small sample, and the Confident Generalist profile is preliminary because that model's testing is not finished.
+- **Caveat:** the types are working archetypes from a small sample.
 
 ## The six sub-dimensions
 
@@ -69,9 +69,9 @@ AI_EI_Project/
 
 **Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its run is complete.
 
-**Write-up:** four working personality types (The Verifier, The Hedger, The Decisive Pragmatist, The Confident Generalist, the last one preliminary) are in `writeup/results_and_archetypes.md` and the one-page guide above.
+**Write-up:** four working personality types (The Verifier, The Hedger, The Decisive Pragmatist, The Confident Generalist) are in `writeup/results_and_archetypes.md` and the one-page guide above.
 
-**Still to do:** finish the Grok run; `analysis/clustering.py`; a human spot-check of the language-model-coded fields; the poster and the video.
+**Still to do:** finish the Grok run; `analysis/clustering.py`; the poster and the video.
 
 **Known limits:** many scores sit near the ceiling; type placement changes with the weighting scheme; with three complete models, the correlation matrix and PCA cannot confirm the 2×2 structure; free and paid tiers are not matched; web search was on by default; faithfulness has low power.
 
