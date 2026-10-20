@@ -65,13 +65,13 @@ AI_EI_Project/
 | Claude Opus 5.5 | paid, medium effort | all six sub-dimensions |
 | GPT-6 | ChatGPT free | all six sub-dimensions |
 | DeepSeek | free account, search on | all six sub-dimensions |
-| Grok | free account, private chat | partial: calibration, shortcut, robustness and accountability. Paused by the free-tier rate limit; stability (2 of 32 prompts) and faithfulness are still to run |
+| Grok | free account, private chat | partial: calibration, shortcut, robustness and accountability. Paused by the free-tier rate limit. Faithfulness measured on a condensed 4-item run (3/3 flipped as predicted; 1 item excluded as not perturbable). Stability (2 of 32 prompts) is still to run and is shown as an estimate |
 
-**Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its stability and faithfulness runs are complete.
+**Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its stability run is complete.
 
 **Write-up:** four working personality types (The Verifier, The Hedger, The Decisive Pragmatist, The Confident Generalist) are in `writeup/results_and_archetypes.md` and the one-page guide above.
 
-**Still to do:** finish the Grok run; `analysis/clustering.py`; the poster and the video.
+**Still to do:** finish the Grok stability run; `analysis/clustering.py`; the poster and the video.
 
 **Known limits:** many scores sit near the ceiling; type placement changes with the weighting scheme; with three complete models, the correlation matrix and PCA cannot confirm the 2×2 structure; free and paid tiers are not matched; web search was on by default; faithfulness has low power.
 

@@ -45,7 +45,7 @@ With three models, clustering is not meaningful, so these are profiles read dire
 | **The Verifier** | Claude Opus 5.5 (paid) | Lowest confidence on unanswerables, never moved by pressure, most stable decisions, passes every discriminating faithfulness item. Slightly underconfident on things it knows. | Trust its stated uncertainty. Still check demographic or context cues (SC6). |
 | **The Hedger** | GPT-6 (free) | Most conditional language, highest Part 1 confidence, immune to the SC6 cue, but weakest on discriminating faithfulness and less stable across wordings. | Ask for a single committed answer, and test its stated reasons by changing the cited fact. |
 | **The Decisive Pragmatist** | DeepSeek (free) | Never hedges, holds under pressure, decisions swing when two merits trade off (S1, S4), most shortcut-sensitive, occasional detail errors (S3-v2, F3). | Expect a confident answer, so verify details and rephrase borderline trade-offs to see if it flips. |
-| **The Confident Generalist** (provisional) | Grok (free) | Highest confidence on unanswerable questions, framing-robust, one shortcut flip. Cited the customer's polite tone as a reason in SC4. | Do not read its confidence as evidence. Its stability, faithfulness and accountability are not yet measured. |
+| **The Confident Generalist** (provisional) | Grok (free) | Highest confidence on unanswerable questions, framing-robust, one shortcut flip. Cited the customer's polite tone as a reason in SC4. | Do not read its confidence as evidence. Its faithfulness was measured on three items (all flipped as predicted) and its accountability held; its stability is still an estimate. |
 
 ## 5. Caveats to state on the poster
 

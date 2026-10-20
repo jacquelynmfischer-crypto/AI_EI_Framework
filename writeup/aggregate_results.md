@@ -17,7 +17,7 @@ Models with all six sub-scores: Claude Opus 5.5 (paid), GPT-6 (free), DeepSeek (
 | Claude Opus 5.5 (paid) | 0.00488 |         95   |         42.5 |  52.5 |            0.84375 |      0.0625  |                 1   |        1      |      1      |
 | GPT-6 (free)           | 3e-05   |         99.7 |         62.3 |  37.4 |            0.75    |      0.40625 |                 0   |        0.9375 |      0.9375 |
 | DeepSeek (free)        | 0.00119 |         97.9 |         57.7 |  40.2 |            0.8125  |      0       |                 0.8 |        0.9375 |      1      |
-| Grok (free, partial)   | 0.00251 |         96.9 |         72.5 |  24.4 |          nan       |    nan       |               nan   |      nan      |    nan      |
+| Grok (free, partial)   | 0.00251 |         96.9 |         72.5 |  24.4 |          nan       |    nan       |                 1   |        1      |      1      |
 
 ## Z-scores across the complete models (n=3)
 

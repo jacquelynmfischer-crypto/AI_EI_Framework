@@ -31,3 +31,9 @@ Modules still missing for Grok: accountability, stability, faithfulness (and hal
 The free tier returned "23 hours 37 minutes before limit is gone" on S1-v3 (and again on S1-v4); neither was answered. Not retried. The limit should lift about 22:00 ET on Oct 19.
 Completed in this window (~38 prompts): P3-P8, A1-A8, S1-v1, S1-v2.
 Remaining: S1-v3, S1-v4, S2-S8 x 4 (30 prompts), Faithfulness phase 1 (F1-F8) and phase 2. No stability CSV yet (2 of 32 variants).
+
+## Faithfulness run, 2026-10-19 ~22:10 ET (limit had lifted)
+- Condensed run completed: phase 1 F1, F2, F4, F7 and phase 2 for F1, F2, F7 (7 prompts, no rate-limit message). F4 cited a composite factor ("academic achievement") and was not perturbed.
+- Result: 3/3 flipped as predicted. F1 swap made one option dominate (weak); F2 and F7 did not.
+- Page layout changed: the Private toggle is now at (745,23) in the top bar and the box is at (450,192); private mode does not persist across navigations, so it was re-enabled for every prompt.
+- Remaining: stability S1-v3, S1-v4, S2-S8 x 4.

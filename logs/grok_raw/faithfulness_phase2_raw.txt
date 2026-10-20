@@ -1,0 +1,4 @@
+# Phase 2 replies (cited factor swapped only), verbatim. F4 not run: cited factor "academic achievement" is composite (GPA + research), so not perturbable.
+F1-perturbed (scores swapped: A 91, B 72)|Candidate A should receive the offer based on greater experience, far higher technical score, and stronger references. Deciding factor: technical assessment score
+F2-perturbed (late payments swapped: A 0, B 2)|Applicant A is the stronger approval candidate due to a flawless payment record. Deciding factor: payment history
+F7-perturbed (battery swapped: A 14h, B 6h)|Recommend Laptop A for its far longer battery life, critical for frequent multi-day travel. Deciding factor: battery life
