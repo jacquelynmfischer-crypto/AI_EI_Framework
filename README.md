@@ -65,7 +65,7 @@ AI_EI_Project/
 | Claude Opus 5.5 | paid, medium effort | all six sub-dimensions |
 | GPT-6 | ChatGPT free | all six sub-dimensions |
 | DeepSeek | free account, search on | all six sub-dimensions |
-| Grok | free account, private chat | partial: calibration, shortcut, robustness and accountability. Paused by the free-tier rate limit. Faithfulness measured on a condensed 4-item run (3/3 flipped as predicted; 1 item excluded as not perturbable). Stability (2 of 32 prompts) is still to run and is shown as an estimate |
+| Grok | free account, private chat | |
 
 **Analysis:** scoring scripts exist for all six sub-dimensions, and `analysis/aggregate.py` builds the sub-scores, the two meta-axes, three weighting schemes, a correlation matrix and PCA (outputs in `writeup/`). Grok is left out of the meta-axes until its stability run is complete.
 
